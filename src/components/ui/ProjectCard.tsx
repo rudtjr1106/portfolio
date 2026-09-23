@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/ssr";
-import { hasImages, projectHref, type Project } from "@/lib/content";
+import { hasImages, kindLabel, projectHref, type Project } from "@/lib/content";
 import { ProjectMark } from "./ProjectMark";
 import { ProjectVisual } from "./ProjectVisual";
 import { Chip } from "./Chip";
@@ -11,7 +11,7 @@ type Heading = "h2" | "h3" | "h4";
 export function ProjectMeta({ project, showKind = true, className = "" }: { project: Project; showKind?: boolean; className?: string }) {
   return (
     <div className={`flex flex-wrap items-center gap-x-3 gap-y-1.5 ${className}`}>
-      {showKind && <Chip>{project.kind === "팀" ? "팀 프로젝트" : "개인 프로젝트"}</Chip>}
+      {showKind && <Chip>{kindLabel(project.kind)}</Chip>}
       <span className="tnum type-label text-muted">{project.period}</span>
       <span className="type-label text-muted">{project.platform}</span>
     </div>

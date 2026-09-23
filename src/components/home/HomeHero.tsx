@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
-import { AndroidLogo, EnvelopeSimple, GithubLogo } from "@phosphor-icons/react/ssr";
+import Image from "next/image";
+import { EnvelopeSimple, GithubLogo } from "@phosphor-icons/react/ssr";
 import { getProject, person } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { LinkButton } from "@/components/ui/Button";
@@ -28,9 +29,15 @@ export function HomeHero() {
             className="rise inline-flex items-center gap-2.5 rounded-full bg-surface py-1.5 pl-1.5 pr-4 text-[14px] font-medium text-ink-2 [box-shadow:inset_0_1px_0_var(--hi),0_0_0_1px_var(--edge),0_6px_16px_-8px_rgb(var(--sh)/0.25)]"
             style={i(0)}
           >
-            <span aria-hidden className="grid size-7 place-items-center rounded-full bg-pill text-pill-ink">
-              <AndroidLogo size={15} weight="bold" />
-            </span>
+            <Image
+              src={person.avatar.src}
+              width={person.avatar.w}
+              height={person.avatar.h}
+              alt=""
+              preload
+              sizes="28px"
+              className="size-7 rounded-full object-cover [box-shadow:0_0_0_1px_var(--edge)]"
+            />
             {person.role} {person.name}
           </p>
 

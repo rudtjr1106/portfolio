@@ -13,7 +13,7 @@ export type Project = {
   name: string;
   nameNote?: string;
   tagline: string; // one line: what it is
-  kind: "팀" | "개인";
+  kind: "팀" | "개인" | "외주";
   platform: string;
   period: string;
   year: number; // for sorting and grouping
@@ -64,13 +64,14 @@ export const person = {
   ],
   now: [
     { what: "UMC 운영 앱", detail: "Android 개발, 중앙 Android 파트장" },
-    { what: "다모임", detail: "앱부터 서버, 배포까지 1인 개발" },
+    { what: "포스크탑", detail: "데스크톱 게임 개발과 운영, 이용자 138명" },
     { what: "지능형데이터처리 연구실", detail: "학부연구생, 컨테이너 런타임 성능 연구" },
   ],
+  avatar: { src: "/profile/avatar.webp", w: 320, h: 320, alt: "조경석 프로필 사진" } as Img, // same as the GitHub avatar
   email: "rudtjr1206@gmail.com",
   github: "https://github.com/rudtjr1106",
   velog: "https://velog.io/@rudtjr1106",
-  // Deliberately omitted from the public site: phone number, birth date, photo.
+  // Deliberately omitted from the public site: phone number, birth date.
 };
 
 export const projects: Project[] = [
@@ -229,10 +230,10 @@ export const projects: Project[] = [
     year: 2026,
     featured: true,
     role: "게임 클라이언트, 서버, 배포, 자동 업데이트 전부",
-    status: "릴리즈 66개, 설치 파일 다운로드 1,275회",
+    status: "이용자 138명, 인스타그램 릴스 조회수 약 2만 회",
     summary: [
       "바탕화면 위를 도트 포켓몬이 걸어다니고, 5-7분마다 야생 포켓몬이 나타나 잡을 수 있는 데스크톱 게임입니다.",
-      "Python 클라이언트와 FastAPI 서버를 혼자 만들었고, 서명·공증된 설치 파일과 자동 업데이트까지 붙여 실제 사용자에게 배포하고 있습니다.",
+      "Python 클라이언트와 FastAPI 서버를 혼자 만들었고, 서명·공증된 설치 파일과 자동 업데이트까지 붙여 배포하고 있습니다. 지금 138명이 이용하고 있고, 소개한 인스타그램 릴스는 조회수 약 2만 회를 기록했습니다.",
     ],
     features: [
       "바탕화면 위를 걷는 도트 포켓몬 (1,025종 중 982종)",
@@ -249,6 +250,7 @@ export const projects: Project[] = [
       "PyInstaller 빌드, Apple 서명과 공증, GitHub Actions 릴리즈와 매일 암호화 백업",
     ],
     highlights: [
+      "릴리즈 66개를 냈고, 설치 파일은 1,275번 내려받아졌습니다.",
       "macOS에서는 Tk가 투명 창에 그리지 못해 CALayer로 직접 그렸습니다.",
       "교체 AI는 순서대로 내보내는 방식과 600판을 붙여 검증했습니다.",
     ],
@@ -430,22 +432,56 @@ export const projects: Project[] = [
   },
   {
     slug: "scoi",
-    name: "SCOI",
-    tagline: "스테이블 코인으로 결제하고 송금하는 앱 (UMC 프로젝트)",
+    name: "스코이",
+    nameNote: "SCOI",
+    tagline: "한국인을 위한 스테이블코인 통합 결제 플랫폼",
     kind: "팀",
     platform: "Android",
     period: "2025.12 - 2026.02",
     year: 2025,
-    team: "Android 4명",
-    role: "프로젝트 구조 설계, 공통 컴포넌트, 충전 파트 (Android 커밋 약 50%)",
-    status: "UMC 프로젝트",
-    summary: ["한국형 스테이블 코인으로 결제와 송금을 하는 플랫폼의 Android 앱입니다."],
-    features: ["회원가입과 로그인", "송금과 계좌 이체", "USDT, USDC 충전과 환전, 입금 주소 생성", "내 지갑과 실시간 차트"],
-    myWork: ["프로젝트 구조와 공통 컴포넌트", "충전·투자 API 연동, 입금 주소 생성, 충전 바텀시트와 완료 화면", "메인, 스플래시, 마이페이지 연결"],
-    stack: ["Kotlin", "XML View", "DataBinding", "Hilt", "Retrofit", "Coroutines", "Navigation", "FCM"],
-    links: [{ label: "GitHub", href: "https://github.com/UMCSCOI/Android" }],
-    images: [],
+    team: "UMC 프로젝트 팀 (Android 4명)",
+    role: "Android 프로젝트 구조 설계, 공통 컴포넌트, 충전 파트 (Android 커밋 약 50%)",
+    status: "UMC 프로젝트, 100명 이상 체험",
+    summary: [
+      "스테이블코인 결제를 한국인에게 익숙한 방식으로 바꾸는 서비스입니다. 붕어빵을 살 때 계좌이체를 하듯 스테이블코인으로도 쉽게 결제하고 송금할 수 있게 하는 것이 목표입니다.",
+      "빗썸, 업비트처럼 여러 거래소에 흩어진 스테이블코인 자산을 스코이 한곳에서 보고, 송금과 충전, 자산 관리까지 할 수 있습니다. 대학생 핀테크 프로젝트로 시작해 100명 이상이 직접 써 봤습니다.",
+    ],
+    features: [
+      "휴대폰 인증, 간편 비밀번호, 거래소 연동 가이드로 이어지는 짧은 가입",
+      "간편 비밀번호와 생체 인증 로그인",
+      "여러 거래소의 USDT, USDC 잔액을 한눈에 보고 송금, 자주 쓰는 주소록",
+      "스테이블코인 충전과 현금 전환, 시세 차트",
+      "내 지갑: 원화 입출금과 송금·충전 기록을 한곳에서",
+      "디페깅(가격 이탈)을 대신 감시하고 알림",
+      "처음 보는 용어는 툴팁과 쉬운 표현으로 안내",
+      "거래소 API 키 연동 관리, API Secret Key 암호화 저장",
+    ],
+    myWork: [
+      "Android 프로젝트 구조 설계와 공통 컴포넌트",
+      "충전 파트: 충전·투자 API 연동, 입금 주소 생성, 충전 바텀시트와 완료 화면",
+      "메인과 스플래시, 홈 동기화, 마이페이지 연결",
+    ],
+    stack: ["Kotlin", "XML View", "DataBinding", "Hilt", "Retrofit", "Coroutines", "Navigation", "Lottie", "FCM"],
+    links: [
+      { label: "GitHub", href: "https://github.com/UMCSCOI/Android" },
+      { label: "서비스 소개", href: "https://fulfilled-moment-057123-029c9b424.framer.app" },
+      { label: "시연 영상", href: "https://www.youtube.com/watch?v=So55GIPyTZg" },
+    ],
+    icon: icon("scoi", "스코이 앱 아이콘"),
+    imageLayout: "phone",
+    images: [
+      { src: "/work/scoi/send.webp", w: 720, h: 1600, alt: "스코이 송금 첫 화면. 지갑 카드와 송금 시작 안내", caption: "송금" },
+      { src: "/work/scoi/send-assets.webp", w: 720, h: 1600, alt: "거래소별 USDT, USDC 잔액을 고르는 화면", caption: "거래소별 자산" },
+      { src: "/work/scoi/send-coin.webp", w: 720, h: 1600, alt: "결제할 스테이블코인으로 USDT와 USDC 중 하나를 고르는 창", caption: "코인 선택" },
+      { src: "/work/scoi/send-recipient.webp", w: 720, h: 1600, alt: "받는 사람 이름과 지갑 주소, 주소록을 입력하는 화면", caption: "받는 사람" },
+      { src: "/work/scoi/send-amount.webp", w: 720, h: 1600, alt: "보낼 금액과 네트워크를 고르는 화면", caption: "금액 입력" },
+      { src: "/work/scoi/charge.webp", w: 720, h: 1600, alt: "USDT 시세 차트가 있는 충전 화면", caption: "충전" },
+      { src: "/work/scoi/charge-cash.webp", w: 720, h: 1600, alt: "스테이블코인을 현금으로 바꾸는 충전 바텀시트", caption: "현금으로 바꾸기" },
+      { src: "/work/scoi/wallet.webp", w: 720, h: 1600, alt: "내 지갑 화면. 보유 자산과 최근 거래 기록", caption: "내 지갑" },
+    ],
+    imageNote: "화면은 스코이 서비스 소개 사이트에서 가져왔습니다.",
   },
+
   {
     slug: "landrop",
     name: "LanDrop",
@@ -461,25 +497,27 @@ export const projects: Project[] = [
     myWork: ["Python 표준 라이브러리 HTTP 서버와 UDP 브로드캐스트, mDNS", "오프라인에서도 동작하는 내장 웹 UI", "백신 오탐을 줄이는 PyInstaller 빌드 설정"],
     stack: ["Python", "HTTP", "UDP", "mDNS", "PyInstaller"],
     links: [{ label: "GitHub", href: "https://github.com/rudtjr1106/LanDrop" }],
+    icon: icon("landrop", "LanDrop 아이콘"),
     images: [],
   },
   {
     slug: "hanbang-macro",
     name: "한의원 차팅 자동화",
     tagline: "한의원의 반복적인 진료 기록(차팅) 작업을 자동화하는 프로그램",
-    kind: "개인",
+    kind: "외주",
     platform: "Windows",
-    period: "2026.01",
-    year: 2026,
-    role: "개발",
-    status: "개인 프로젝트",
-    summary: ["한의원에서 매번 손으로 반복하던 차팅 입력을 자동으로 처리하는 프로그램입니다."],
+    period: "2025",
+    year: 2025,
+    role: "외주 개발",
+    status: "2025년 외주 프로젝트",
+    summary: ["한의원에서 의뢰받아 만든 외주 프로그램입니다. 진료 때마다 손으로 반복하던 차팅 입력을 자동으로 처리합니다."],
     features: ["반복 차팅 입력 자동화"],
-    myWork: ["Python으로 작성"],
+    myWork: ["차팅 자동화 프로그램 개발 (Python)"],
     stack: ["Python"],
     links: [{ label: "GitHub", href: "https://github.com/rudtjr1106/hanbangmacro" }],
     images: [],
   },
+
   {
     slug: "darestory",
     name: "달의 이야기",
@@ -495,25 +533,8 @@ export const projects: Project[] = [
     myWork: ["presentation, domain, data 멀티 모듈과 buildSrc", "Firebase Auth, Realtime Database, FCM 연동 (Firestore에서 전환)", "Room으로 최근 검색어, 네이버 책 검색 API 연동"],
     stack: ["Kotlin", "XML View", "DataBinding", "멀티 모듈", "MVVM", "Hilt", "Coroutines", "Firebase", "Room"],
     links: [{ label: "GitHub", href: "https://github.com/rudtjr1106/DareStory" }],
+    icon: icon("darestory", "달의 이야기 앱 아이콘"),
     images: [],
-  },
-  {
-    slug: "maedeup",
-    name: "매듭",
-    tagline: "팀 프로젝트 팀원을 쉽게 구하기 위한 앱",
-    kind: "개인",
-    platform: "Android",
-    period: "2024.03",
-    year: 2024,
-    role: "서버 없이 혼자 개발",
-    status: "개인 프로젝트",
-    summary: ["팀 프로젝트 팀원을 구하기 어렵다는 문제에서 시작해, 서버 없이 Firebase만으로 만든 앱입니다."],
-    features: ["카카오 로그인과 자동 로그인", "실시간 채팅"],
-    myWork: ["Firebase Functions가 카카오 사용자 API를 호출하고 Custom Token으로 Firebase 인증을 잇는 로그인", "Realtime Database 채팅을 callbackFlow로 구독"],
-    stack: ["Kotlin", "Firebase Functions", "Firebase Auth", "Realtime Database", "Coroutines"],
-    links: [],
-    images: [],
-    note: "과정은 공부 기록에 정리했습니다.",
   },
   {
     slug: "volunteer",
@@ -646,7 +667,7 @@ export const study: Study[] = [
     area: "Android",
     source: "Notion",
     period: "2024.03",
-    summary: ["서버 없이 혼자 만든 앱 '매듭'에서 막혔던 두 가지를 정리했습니다."],
+    summary: ["서버 없이 Firebase만으로 앱을 만들며 막혔던 두 가지, 카카오 로그인과 실시간 채팅을 정리했습니다."],
     topics: ["Firebase Functions", "Custom Token", "Kakao 로그인", "Realtime Database", "suspendCoroutine", "callbackFlow"],
     sections: [
       {
@@ -662,17 +683,6 @@ export const study: Study[] = [
         items: ["값이 계속 들어오는 리스너를 suspendCoroutine으로 감싸 'Already resumed' 오류가 남", "callbackFlow와 awaitClose로 바꿔 스트림으로 구독"],
       },
     ],
-    related: "maedeup",
-  },
-  {
-    slug: "android-interview",
-    title: "Android 면접 기술 질문 정리",
-    short: "4대 컴포넌트, Context, 생명주기부터 코루틴, Hilt, DiffUtil까지 23개 질문",
-    area: "Android",
-    source: "Notion",
-    period: "2025",
-    summary: ["면접을 준비하며 자주 나오는 Android와 Kotlin 질문을 모아 스스로 답을 달아 보고 있습니다. 아직 답을 채우는 중인 질문도 있습니다."],
-    topics: ["4대 컴포넌트", "Application Context와 Activity Context", "ViewModel과 AndroidViewModel", "sealed class와 enum", "Repository 패턴", "data class의 copy", "Service 재시작 정책", "Activity, Fragment 생명주기", "lateinit과 by lazy", "remember와 mutableState", "LaunchedEffect", "코루틴 동시성과 병렬성", "Hilt의 @Binds와 @Provides", "의존성 주입", "DiffUtil"],
   },
   {
     slug: "android-radar",

@@ -46,6 +46,18 @@ export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }
 
+export type ProjectKind = Project["kind"];
+
+/** "팀" -> "팀 프로젝트", "개인" -> "개인 프로젝트", "외주" -> "외주 프로젝트". */
+export const kindLabel = (k: ProjectKind) => `${k} 프로젝트`;
+
+/** How many projects of each kind, e.g. { 팀: 7, 개인: 5, 외주: 1 }. */
+export const kindCounts: Record<ProjectKind, number> = {
+  팀: projects.filter((p) => p.kind === "팀").length,
+  개인: projects.filter((p) => p.kind === "개인").length,
+  외주: projects.filter((p) => p.kind === "외주").length,
+};
+
 /** Projects with at least one screenshot. */
 export const hasImages = (p: Project) => p.images.length > 0;
 

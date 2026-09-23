@@ -10,15 +10,15 @@ import { arrangeByYear, SLOT_CLASS } from "./arrange";
   one piece of state through this provider. Tiles are rendered on the server and passed in as
   nodes, so the browser only receives slugs, years and the rendered markup, not site.ts.
 
-  The filter lives in the URL (?kind=team | ?kind=solo), so a filtered view can be linked and
+  The filter lives in the URL (?kind=team | ?kind=solo | ?kind=client), so a filtered view can be linked and
   survives going back from a detail page. It is read with useSyncExternalStore: the prerendered
   HTML (and hydration) always shows 전체, then the client switches to the URL's filter. No
   useSearchParams, so the page stays fully static without a Suspense fallback.
 */
 
-export type Kind = "all" | "team" | "solo";
+export type Kind = "all" | "team" | "solo" | "client";
 
-const KIND_LABEL: Record<Kind, string> = { all: "전체", team: "팀 프로젝트", solo: "개인 프로젝트" };
+const KIND_LABEL: Record<Kind, string> = { all: "전체", team: "팀 프로젝트", solo: "개인 프로젝트", client: "외주 프로젝트" };
 
 const PARAM = "kind";
 const listeners = new Set<() => void>();
@@ -34,7 +34,7 @@ function subscribe(onChange: () => void) {
 
 function kindFromUrl(): Kind {
   const v = new URLSearchParams(window.location.search).get(PARAM);
-  return v === "team" || v === "solo" ? v : "all";
+  return v === "team" || v === "solo" || v === "client" ? v : "all";
 }
 
 const serverKind = (): Kind => "all";
@@ -76,7 +76,9 @@ export function ProjectFilterProvider({ children }: { children: ReactNode }) {
 
 export function ProjectFilterBar({ counts }: { counts: Record<Kind, number> }) {
   const { kind, setKind } = useFilter();
-  const options: FilterOption<Kind>[] = (["all", "team", "solo"] as const).map((k) => ({ value: k, label: KIND_LABEL[k], count: counts[k] }));
+  const options: FilterOption<Kind>[] = (["all", "team", "solo", "client"] as const)
+    .filter((k) => k === "all" || counts[k] > 0)
+    .map((k) => ({ value: k, label: KIND_LABEL[k], count: counts[k] }));
   return <FilterPills label="프로젝트 구분" options={options} value={kind} onChange={setKind} />;
 }
 
@@ -85,7 +87,7 @@ export type BrowserItem = {
   year: number;
   /** has screenshots: gets a visual tile */
   visual: boolean;
-  team: boolean;
+  kind: Exclude<Kind, "all">;
   node: ReactNode;
 };
 
@@ -96,7 +98,7 @@ export type BrowserItem = {
  */
 export function ProjectYearList({ items }: { items: BrowserItem[] }) {
   const { kind, changes } = useFilter();
-  const shown = kind === "all" ? items : items.filter((x) => (kind === "team") === x.team);
+  const shown = kind === "all" ? items : items.filter((x) => x.kind === kind);
   const groups = arrangeByYear(shown);
 
   const offsets: number[] = [];

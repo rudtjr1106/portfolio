@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { featuredProjects, imageLayoutOf, projectCount, projects, projectsSorted, type Project } from "@/lib/content";
+import { featuredProjects, imageLayoutOf, kindCounts, projectCount, projects, projectsSorted, type Project } from "@/lib/content";
 import { Section } from "@/components/ui/Section";
 import { ProjectCard, CardArrow } from "@/components/ui/ProjectCard";
 import { ProjectMarkGrid, ProjectMarkStack, iconsFirst } from "@/components/ui/ProjectMark";
@@ -17,11 +17,12 @@ const stageFor = (p: Project) =>
 const SLOT_ORDER = ["pinyut", "damoim", "umc", "poketdesktop", "switchboard"];
 
 function allProjectsCopy() {
-  const team = projects.filter((p) => p.kind === "팀").length;
   const since = Math.min(...projects.map((p) => p.year));
+  const parts = [`팀 프로젝트 ${kindCounts.팀}개`, `개인 프로젝트 ${kindCounts.개인}개`];
+  if (kindCounts.외주 > 0) parts.push(`외주 ${kindCounts.외주}개`);
   return {
     title: `프로젝트 ${projectCount}개 모두 보기`,
-    sub: `${since}년부터 지금까지, 팀 프로젝트 ${team}개와 개인 프로젝트 ${projects.length - team}개`,
+    sub: `${since}년부터 지금까지, ${parts.join(", ")}`,
   };
 }
 

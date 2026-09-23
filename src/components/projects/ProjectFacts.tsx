@@ -1,4 +1,4 @@
-import type { Project } from "@/lib/content";
+import { kindLabel, type Project } from "@/lib/content";
 import { MetaList, type MetaItem } from "@/components/ui/MetaList";
 
 /**
@@ -6,7 +6,7 @@ import { MetaList, type MetaItem } from "@/components/ui/MetaList";
  * period, kind, platform, team (team projects only), status and role.
  */
 export function ProjectFacts({ project: p }: { project: Project }) {
-  const kind = p.kind === "팀" ? "팀 프로젝트" : "개인 프로젝트";
+  const kind = kindLabel(p.kind);
   const items: MetaItem[] = [
     { label: "기간", value: <span className="tnum">{p.period}</span> },
     { label: "구분", value: kind },
