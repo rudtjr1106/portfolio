@@ -11,6 +11,7 @@ import {
   projects,
   studiesForProject,
   studyHref,
+  shareImage,
 } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -38,7 +39,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = getProject(slug);
   if (!p) return {};
-  const og = p.images[0] ?? p.icon;
   return {
     title: p.name,
     description: p.tagline,
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: p.tagline,
       locale: "ko_KR",
       type: "article",
-      images: og ? [{ url: og.src, width: og.w, height: og.h, alt: og.alt }] : undefined,
+      images: [shareImage],
     },
   };
 }

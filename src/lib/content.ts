@@ -9,6 +9,19 @@ export type { Img, Link, Project, Study };
 
 export type StudyArea = Study["area"];
 
+/* ---------- Share image ---------- */
+
+/**
+ * The site-wide link preview (src/app/opengraph-image.jpg). Pages that set their own `openGraph`
+ * replace the root one entirely, so they must list this image again or previews lose the picture.
+ */
+export const shareImage = {
+  url: "/opengraph-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: "조경석, Android 개발자. 앱을 만들고, 출시하고, 운영합니다.",
+};
+
 /* ---------- URLs ---------- */
 
 export const projectHref = (slug: string) => `/projects/${slug}`;

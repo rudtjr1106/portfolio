@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { person } from "@/lib/content";
+import { person, shareImage } from "@/lib/content";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { IconShelf } from "@/components/ui/IconShelf";
 import { ContactPanel } from "@/components/ui/ContactPanel";
@@ -10,7 +10,7 @@ import { Record } from "@/components/about/Record";
 export const metadata: Metadata = {
   title: "소개",
   description: person.about[0],
-  openGraph: { title: `소개 | ${person.name}`, description: person.about[0], type: "profile", locale: "ko_KR" },
+  openGraph: { title: `소개 | ${person.name}`, description: person.about[0], type: "profile", locale: "ko_KR", images: [shareImage] },
 };
 
 export default function AboutPage() {

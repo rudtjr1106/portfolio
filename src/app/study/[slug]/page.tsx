@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GithubLogo } from "@phosphor-icons/react/ssr";
-import { adjacentStudy, getStudy, person, relatedProject, study, studyHref } from "@/lib/content";
+import { adjacentStudy, getStudy, person, relatedProject, shareImage, study, studyHref } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { MetaList } from "@/components/ui/MetaList";
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: s.title,
     description: s.short,
-    openGraph: { title: `${s.title} | ${person.name}`, description: s.short, type: "article", locale: "ko_KR" },
+    openGraph: { title: `${s.title} | ${person.name}`, description: s.short, type: "article", locale: "ko_KR", images: [shareImage] },
   };
 }
 

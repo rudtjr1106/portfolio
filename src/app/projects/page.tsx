@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { hasImages, kindCounts, person, projectCount, projectsSorted, type Project } from "@/lib/content";
+import { hasImages, kindCounts, person, projectCount, projectsSorted, shareImage, type Project } from "@/lib/content";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ProjectTile } from "@/components/projects/ProjectTile";
 import { ProjectFilterBar, ProjectFilterProvider, ProjectYearList, type BrowserItem } from "@/components/projects/ProjectBrowser";
@@ -10,7 +10,7 @@ const description = `지금까지 만든 프로젝트 ${projectCount}개`;
 export const metadata: Metadata = {
   title: "프로젝트",
   description,
-  openGraph: { title: `프로젝트 | ${person.name}`, description, type: "website", locale: "ko_KR" },
+  openGraph: { title: `프로젝트 | ${person.name}`, description, type: "website", locale: "ko_KR", images: [shareImage] },
 };
 
 const KIND_PARAM: Record<Project["kind"], BrowserItem["kind"]> = { 팀: "team", 개인: "solo", 외주: "client" };

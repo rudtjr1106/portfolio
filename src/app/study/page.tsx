@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { person, studyCount } from "@/lib/content";
+import { person, shareImage, studyCount } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionHeading } from "@/components/ui/Section";
@@ -12,7 +12,7 @@ const description = `Notion과 GitHub에 정리한 공부 기록 ${studyCount}�
 export const metadata: Metadata = {
   title: "공부",
   description,
-  openGraph: { title: `공부 | ${person.name}`, description, type: "website", locale: "ko_KR" },
+  openGraph: { title: `공부 | ${person.name}`, description, type: "website", locale: "ko_KR", images: [shareImage] },
 };
 
 export default function StudyPage() {
