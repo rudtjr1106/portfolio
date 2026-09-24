@@ -1,105 +1,87 @@
-# 조경석 포트폴리오
+<div align="center">
 
-만든 것(프로젝트)과 공부한 것(스터디 노트)을 모아 둔 개인 포트폴리오 사이트입니다.
-Next.js 16 App Router로 만들었고, 모든 페이지가 빌드할 때 정적으로 생성됩니다.
+<a href="https://gyeongseok.vercel.app">
+  <img src="src/app/opengraph-image.jpg" alt="조경석 포트폴리오 미리보기" width="100%" />
+</a>
 
-| 주소 | 내용 |
+<br />
+<br />
+
+# 조경석
+
+**Android 개발자**<br />
+앱을 만들고, 출시하고, 운영합니다.
+
+<br />
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-gyeongseok.vercel.app-D9481A?style=for-the-badge&logo=vercel&logoColor=white)](https://gyeongseok.vercel.app)
+
+[![Gmail](https://img.shields.io/badge/Gmail-rudtjr1206@gmail.com-121418?style=flat-square&logo=gmail&logoColor=white)](mailto:rudtjr1206@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-rudtjr1106-121418?style=flat-square&logo=github&logoColor=white)](https://github.com/rudtjr1106)
+[![velog](https://img.shields.io/badge/velog-rudtjr1106-20C997?style=flat-square&logo=velog&logoColor=white)](https://velog.io/@rudtjr1106)
+
+</div>
+
+<br />
+
+## 둘러보기
+
+| | |
 |---|---|
-| `/` | 첫 화면. 대표 프로젝트, 공부 기록 일부, 지금 하는 것, 연락처 |
-| `/projects` | 프로젝트 전체 (연도별, 팀/개인 필터. `?kind=team`, `?kind=solo`로 바로 열 수 있음) |
-| `/projects/[slug]` | 프로젝트 상세 |
-| `/study` | 공부 기록 전체 (분야별) |
-| `/study/[slug]` | 공부 기록 상세 |
-| `/about` | 소개 |
+| [**만든 것**](https://gyeongseok.vercel.app/projects) | 팀으로 출시한 앱부터 혼자 만든 도구, 외주 작업까지 |
+| [**공부한 것**](https://gyeongseok.vercel.app/study) | Notion과 GitHub에 정리해 온 공부 기록 |
+| [**소개**](https://gyeongseok.vercel.app/about) | 학력, 활동, 수상, 다루는 기술 |
 
-## 로컬에서 실행하기
+<br />
 
-Node.js 20.9 이상이 필요합니다.
+## 대표 프로젝트
 
-```bash
-npm install
-npm run dev
-```
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <a href="https://gyeongseok.vercel.app/projects/pinyut"><img src="public/work/icons/pinyut.webp" width="72" alt="핀유트" /></a><br />
+      <b>핀유트</b><br />
+      <sub>지인이 다녀온 곳만 모아 보는 지도 SNS</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://gyeongseok.vercel.app/projects/umc"><img src="public/work/icons/umc.webp" width="72" alt="UMC 운영 앱" /></a><br />
+      <b>UMC 운영 앱</b><br />
+      <sub>전국 28개 대학 IT 동아리 운영 앱</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://gyeongseok.vercel.app/projects/damoim"><img src="public/work/icons/damoim.webp" width="72" alt="다모임" /></a><br />
+      <b>다모임</b><br />
+      <sub>기획부터 서버까지 혼자 만든 동아리 운영 앱</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://gyeongseok.vercel.app/projects/poketdesktop"><img src="public/work/icons/poketdesktop.webp" width="72" alt="포스크탑" /></a><br />
+      <b>포스크탑</b><br />
+      <sub>바탕화면을 걸어다니는 포켓몬 게임</sub>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://gyeongseok.vercel.app/projects/switchboard"><img src="public/work/icons/switchboard.webp" width="72" alt="스위치보드" /></a><br />
+      <b>스위치보드</b><br />
+      <sub>Android 원격 설정 편집 데스크톱 앱</sub>
+    </td>
+  </tr>
+</table>
 
-브라우저에서 http://localhost:3000 을 열면 됩니다. 파일을 저장하면 바로 반영됩니다.
+<div align="center">
 
-그 밖의 명령어는 다음과 같습니다.
+<a href="https://gyeongseok.vercel.app/projects/hugg"><img src="public/work/icons/hugg.webp" width="44" alt="허그" /></a>&nbsp;
+<a href="https://gyeongseok.vercel.app/projects/scoi"><img src="public/work/icons/scoi.webp" width="44" alt="스코이" /></a>&nbsp;
+<a href="https://gyeongseok.vercel.app/projects/plub"><img src="public/work/icons/plub.webp" width="44" alt="PLUB" /></a>&nbsp;
+<a href="https://gyeongseok.vercel.app/projects/landrop"><img src="public/work/icons/landrop.webp" width="44" alt="LanDrop" /></a>&nbsp;
+<a href="https://gyeongseok.vercel.app/projects/darestory"><img src="public/work/icons/darestory.webp" width="44" alt="달의 이야기" /></a>
 
-```bash
-npm run build   # 배포용 빌드 (모든 페이지를 정적으로 생성)
-npm run start   # 빌드한 결과를 로컬에서 실행
-npm run lint    # ESLint 검사
-```
+<sub>그 밖의 프로젝트는 <a href="https://gyeongseok.vercel.app/projects">사이트</a>에서 볼 수 있어요.</sub>
 
-## 내용 고치기
+</div>
 
-글, 프로젝트, 공부 기록은 모두 **`src/content/site.ts`** 한 파일에 있습니다. 페이지 코드는 건드리지 않아도 됩니다.
+<br />
 
-- `person`: 이름, 소개 문장, 이메일, GitHub, velog, 지금 하는 것(`now`)
-- `projects`: 프로젝트 목록. `featured: true`인 프로젝트가 첫 화면에 나옵니다.
-- `study`: 공부 기록 목록. `featured: true`인 기록이 첫 화면에 나옵니다. `related`에 프로젝트 `slug`를 적으면 서로 연결됩니다.
-- `record`: 소개 페이지의 이력
+<div align="center">
 
-새 프로젝트나 공부 기록을 추가하면 목록, 상세 페이지, 이전/다음 링크가 자동으로 만들어집니다.
-`slug`는 주소에 쓰이므로 영문 소문자와 `-`만 쓰는 것이 좋습니다.
+<sub>© 2026 조경석. 이 저장소는 <a href="https://gyeongseok.vercel.app">gyeongseok.vercel.app</a>의 소스입니다.</sub>
 
-## 이미지
-
-이미지는 **`public/work`** 폴더에 있습니다.
-
-```
-public/work/
-  icons/          앱 아이콘 (정사각형)
-  pinyut/         프로젝트별 스크린샷
-  damoim/
-  ...
-```
-
-`site.ts`에서는 `/work/...`로 시작하는 경로와 함께 실제 픽셀 크기(`w`, `h`), 대체 텍스트(`alt`), 캡션(`caption`)을 적습니다.
-
-```ts
-{ src: "/work/pinyut/map.webp", w: 772, h: 1600, alt: "핀유트 핀맵 화면", caption: "핀맵" }
-```
-
-- 형식은 webp를 권장합니다.
-- 휴대폰 화면은 폰 프레임 안에 들어갑니다. 데스크톱 앱이라면 프로젝트에 `imageLayout: "desktop"`을 적어 주세요.
-- 스크린샷이 없는 프로젝트는 아이콘(없으면 이름 첫 글자 타일)으로 표시됩니다.
-
-## Vercel에 배포하기
-
-### 방법 1. 저장소 가져오기
-
-1. 이 폴더를 GitHub 저장소에 올립니다.
-2. https://vercel.com/new 에서 그 저장소를 선택합니다 (Import).
-3. 설정은 그대로 두고 Deploy를 누릅니다. Next.js 프로젝트로 자동 인식됩니다.
-
-이후에는 기본 브랜치에 push할 때마다 자동으로 다시 배포됩니다.
-
-### 방법 2. 터미널에서 바로 배포
-
-```bash
-npx vercel          # 처음 한 번은 로그인과 프로젝트 연결을 묻습니다. 미리보기 주소가 나옵니다.
-npx vercel --prod   # 실제 주소로 배포
-```
-
-### 공유 미리보기 주소
-
-링크를 공유할 때 보이는 미리보기 이미지(og:image)는 사이트 주소를 기준으로 만들어집니다.
-Vercel에서는 기본 production 주소를 자동으로 사용합니다.
-직접 산 도메인을 연결했다면 Vercel 프로젝트의 Environment Variables에 다음 값을 추가해 주세요.
-
-```
-NEXT_PUBLIC_SITE_URL=https://내-도메인.com
-```
-
-## 폴더 구조
-
-```
-src/
-  content/site.ts     모든 내용 (여기만 고치면 됩니다)
-  lib/content.ts      site.ts를 정렬하고 찾는 도우미 (내용을 새로 만들지 않음)
-  app/                페이지 (App Router)
-  components/         화면 구성 요소
-public/work/          이미지
-DESIGN.md             디자인 규칙 (색, 모서리, 컴포넌트 사용법)
-```
+</div>
