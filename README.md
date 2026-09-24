@@ -26,7 +26,7 @@
 
 ## 둘러보기
 
-| | |
+| 페이지 | 담긴 내용 |
 |---|---|
 | [**만든 것**](https://gyeongseok.vercel.app/projects) | 팀으로 출시한 앱부터 혼자 만든 도구, 외주 작업까지 |
 | [**공부한 것**](https://gyeongseok.vercel.app/study) | Notion과 GitHub에 정리해 온 공부 기록 |
