@@ -113,7 +113,8 @@ Keep headings short. `h1, h2, h3` already get `text-wrap: balance`.
 - `globals.css` puts element defaults in `@layer base` and component classes (`.pill`, `.chip`,
   `.phone`, `.window`, `.mark-tile`, `.lightbox*`, `.rail`) in `@layer components`, so any Tailwind
   utility you add on top wins (e.g. `className="pill pill-primary h-9"` really is 36px tall).
-- Z scale: backdrop `.field` -1, content auto, nav 40, grain 50, dialogs in the native top layer.
+- Z scale: backdrop `.field` and the floating-fragment layer `.drift` -1, content auto, nav 40, grain 50, dialogs in the native top layer.
+- Backdrop (`src/components/site/Backdrop.tsx`): the plaster `.field` plus blurred real app fragments (`public/backdrop/*.webp`) on three depth planes that drift up slower than the page via a CSS scroll-driven animation. Edges only, away from text columns; fewer and smaller on phones; static under reduced motion.
   Do not add other z-indexes except local stacking inside a visual (0-3).
 
 ---

@@ -222,6 +222,76 @@
   .field::after { opacity: 0.07; mix-blend-mode: screen; }
 }
 
+/*
+  Floating app fragments (src/components/site/Backdrop.tsx): real screens and icons, pre-blurred by
+  depth, hanging in front of the wall and far behind the content. Three planes drift upward slower
+  than the page (far 0.06, mid 0.14, near 0.26 of the scroll), compositor-only via a scroll-driven
+  transform. Static under reduced motion or without scroll timelines.
+*/
+.drift {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+  /* 1px at 1440 wide, clamped so fragments never get tiny or huge */
+  --u: clamp(0.74px, 0.0694vw, 1.2px);
+}
+.drift-plane {
+  position: absolute;
+  inset: 0;
+}
+.drift-plane[data-plane="far"] { --speed: 0.06; opacity: 0.74; }
+.drift-plane[data-plane="mid"] { --speed: 0.14; opacity: 0.84; }
+.drift-plane[data-plane="near"] { --speed: 0.26; opacity: 0.92; }
+
+.frag {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1svh);
+  width: calc(var(--w) * var(--u));
+  aspect-ratio: var(--ar);
+  translate: var(--ox) var(--oy);
+  rotate: var(--r);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.frag[data-tone="vivid"] { opacity: 0.52; }
+
+@media (max-width: 639px) {
+  .drift { --u: 0.6px; }
+  .frag { display: none; }
+  .frag[data-m] {
+    display: block;
+    left: calc(var(--mx) * 1%);
+    top: calc(var(--my) * 1svh);
+  }
+}
+
+/* dark room: white screens would glow, so they sit far dimmer than the icons */
+@media (prefers-color-scheme: dark) {
+  .drift-plane[data-plane="far"] { opacity: 0.2; }
+  .drift-plane[data-plane="mid"] { opacity: 0.26; }
+  .drift-plane[data-plane="near"] { opacity: 0.32; }
+  .frag[data-tone="pale"] { opacity: 0.5; }
+  .frag[data-tone="vivid"] { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .drift-plane {
+      will-change: transform;
+      animation: drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 6000px;
+    }
+  }
+}
+@keyframes drift {
+  to { transform: translate3d(0, calc(var(--speed) * -6000px), 0); }
+}
+
 .grain {
   position: fixed;
   inset: 0;

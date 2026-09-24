@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { person } from "@/lib/content";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { Backdrop } from "@/components/site/Backdrop";
 import "./globals.css";
 
 // Hangul: Pretendard (self-hosted from the npm package). Latin/numbers: Geist.
@@ -56,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" className={`${pretendard.variable} ${geist.variable} ${geistMono.variable} antialiased`}>
       <body>
-        <div className="field" aria-hidden />
+        <Backdrop />
         <a href="#main" className="skip-link">
           본문으로 건너뛰기
         </a>
