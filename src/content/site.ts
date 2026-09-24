@@ -165,7 +165,16 @@ export const projects: Project[] = [
     ],
     icon: icon("umc", "UMC 앱 아이콘"),
     imageLayout: "phone",
-    images: [],
+    images: [
+      { src: "/work/umc/home.webp", w: 720, h: 1561, alt: "UMC 홈. 누적 활동일, 참여 기수, 기수별 상점과 벌점, 일정이 있는 날에 점이 찍힌 월간 달력", caption: "홈" },
+      { src: "/work/umc/attendance.webp", w: 720, h: 1561, alt: "UMC 출석 체크. 지도 위 출석 인정 반경과 위치 인증 실패 상태, 비활성 출석 요청 버튼과 사유 제출 링크, 아래에 지각으로 처리된 출석 기록", caption: "지도 기반 출석" },
+      { src: "/work/umc/chat.webp", w: 720, h: 1561, alt: "UMC 커뮤니티 스레드 채팅방. 파트 태그가 붙은 참여자 메시지와 입력창", caption: "커뮤니티 채팅" },
+      { src: "/work/umc/notices.webp", w: 720, h: 1561, alt: "UMC 공지 목록. 기수 선택, 전체·지부·학교·파트 필터와 공지 카드, 공지 작성 버튼", caption: "공지" },
+      { src: "/work/umc/notice-write.webp", w: 720, h: 1561, alt: "UMC 공지 작성. 공지 카테고리와 게시판 분류, 제목과 본문 입력, 하단 마크다운 툴바", caption: "공지 작성" },
+      { src: "/work/umc/admin-attendance.webp", w: 720, h: 1561, alt: "UMC 운영진 출석 관리. 세션별 출석률, 출석 인원, 승인 대기 인원과 승인 대기 명단 버튼", caption: "운영진 출석 관리" },
+      { src: "/work/umc/login.webp", w: 720, h: 1561, alt: "UMC 로그인. 카카오와 Google 로그인, UMC 계정 로그인 버튼", caption: "로그인" },
+    ],
+    imageNote: "Android 5명이 함께 만드는 팀 앱의 화면이고, 이 중 로그인, 공지, 출석이 제가 맡은 영역입니다. 개발 서버의 QA 테스트 계정으로 찍어 실제 이용자 정보는 없습니다.",
   },
   {
     slug: "damoim",
