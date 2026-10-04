@@ -64,7 +64,7 @@ export const person = {
   ],
   now: [
     { what: "UMC 운영 앱", detail: "Android 개발, 중앙 Android 파트장" },
-    { what: "포스크탑", detail: "데스크톱 게임 개발과 운영, 이용자 138명" },
+    { what: "포스크탑", detail: "데스크톱 게임 개발과 운영, 이용자 약 300명" },
     { what: "지능형데이터처리 연구실", detail: "학부연구생, 컨테이너 런타임 성능 연구" },
   ],
   avatar: { src: "/profile/avatar.webp", w: 320, h: 320, alt: "조경석 프로필 사진" } as Img, // same as the GitHub avatar
@@ -235,14 +235,14 @@ export const projects: Project[] = [
     tagline: "바탕화면을 걸어다니는 포켓몬을 잡고 키우고 대전하는 데스크톱 게임",
     kind: "개인",
     platform: "Windows, macOS, 서버",
-    period: "2026.08 - 2026.09",
+    period: "2026.08 - 운영 중",
     year: 2026,
     featured: true,
     role: "게임 클라이언트, 서버, 배포, 자동 업데이트 전부",
-    status: "이용자 138명, 인스타그램 릴스 조회수 약 2만 회",
+    status: "이용자 약 300명, 인스타그램 릴스 누적 조회수 약 5만 회",
     summary: [
       "바탕화면 위를 도트 포켓몬이 걸어다니고, 5-7분마다 야생 포켓몬이 나타나 잡을 수 있는 데스크톱 게임입니다.",
-      "Python 클라이언트와 FastAPI 서버를 혼자 만들었고, 서명·공증된 설치 파일과 자동 업데이트까지 붙여 배포하고 있습니다. 지금 138명이 이용하고 있고, 소개한 인스타그램 릴스는 조회수 약 2만 회를 기록했습니다.",
+      "Python 클라이언트와 FastAPI 서버를 혼자 만들었고, 서명·공증된 설치 파일과 자동 업데이트까지 붙여 배포하고 있습니다. 지금 약 300명이 이용하고 있고, 소개한 인스타그램 릴스는 누적 조회수 약 5만 회를 기록했습니다.",
     ],
     features: [
       "바탕화면 위를 걷는 도트 포켓몬 (1,025종 중 982종)",
@@ -259,7 +259,7 @@ export const projects: Project[] = [
       "PyInstaller 빌드, Apple 서명과 공증, GitHub Actions 릴리즈와 매일 암호화 백업",
     ],
     highlights: [
-      "릴리즈 66개를 냈고, 설치 파일은 1,275번 내려받아졌습니다.",
+      "릴리즈 77개를 냈고, 설치 파일은 2,090번 내려받아졌습니다.",
       "macOS에서는 Tk가 투명 창에 그리지 못해 CALayer로 직접 그렸습니다.",
       "교체 AI는 순서대로 내보내는 방식과 600판을 붙여 검증했습니다.",
     ],
