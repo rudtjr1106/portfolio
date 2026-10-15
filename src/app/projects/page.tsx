@@ -38,7 +38,7 @@ export default function ProjectsPage() {
     <ProjectFilterProvider>
       <PageHeader
         title="프로젝트"
-        lede={`Android를 처음 시작한 ${since}년부터 지금까지 만든 프로젝트 ${projectCount}개입니다. 팀으로 출시한 앱부터 혼자 만든 도구, 외주 작업까지 모두 담았습니다.`}
+        lede={`Android를 처음 시작한 ${since}년부터 지금까지 만든 프로젝트 ${projectCount}개입니다. 팀으로 출시한 앱과 혼자 만든 도구, 외주 작업을 함께 올렸습니다.`}
       >
         <ProjectFilterBar counts={{ all: projectCount, team: kindCounts.팀, solo: kindCounts.개인, client: kindCounts.외주 }} />
       </PageHeader>

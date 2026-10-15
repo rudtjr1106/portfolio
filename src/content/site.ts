@@ -57,10 +57,10 @@ export const person = {
   nameEn: "Kyungseok Cho",
   role: "Android 개발자",
   headline: "앱을 만들고, 출시하고, 운영합니다.", // from the user's GitHub profile README
-  lede: "Kotlin으로 Android와 iOS, 서버까지. 지금까지 만든 것과 공부한 것을 모았습니다.",
+  lede: "Kotlin으로 Android와 iOS 앱, 서버를 개발합니다. 지금까지 만든 것과 공부한 것을 모았습니다.",
   about: [
-    "명지대학교 컴퓨터공학과에 다니는 Android 개발자입니다. XML View로 시작해 Jetpack Compose, Kotlin Multiplatform으로 옮겨 왔고, 필요하면 서버와 데스크톱 앱도 직접 만듭니다.",
-    "지금은 UMC 중앙 Android 파트장으로 운영 앱을 만들고 전국 챌린저 교육을 맡고 있습니다. 연구실에서는 컨테이너 런타임의 데이터 입력 성능을 측정하고 있습니다.",
+    "명지대학교 컴퓨터공학과에 다니는 Android 개발자입니다. XML View로 시작해 Jetpack Compose와 Kotlin Multiplatform으로 옮겨 왔습니다. 필요하면 서버와 데스크톱 앱도 직접 만듭니다.",
+    "지금은 UMC 중앙 Android 파트장으로 운영 앱을 만들고 전국 챌린저 교육을 맡고 있습니다. 연구실에서는 컨테이너 런타임의 데이터 입력 성능을 측정합니다.",
   ],
   now: [
     { what: "UMC 운영 앱", detail: "Android 개발, 중앙 Android 파트장" },
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     slug: "pinyut",
     name: "핀유트",
     nameNote: "구 핀업",
-    tagline: "지인이 직접 다녀온 곳만 모아 보는 지도 기반 장소 공유 SNS",
+    tagline: "지인이 직접 다녀온 곳만 지도에 모아 보는 장소 공유 SNS",
     kind: "팀",
     platform: "Android, iOS",
     period: "2025.08 - 진행 중",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     role: "프로젝트 세팅을 뺀 거의 모든 화면과 iOS 네이티브 연결, 스토어 배포",
     status: "Google Play, App Store 출시 후 운영 중",
     summary: [
-      "광고성 리뷰 때문에 믿기 어려워진 지도 서비스 대신, 지인이 직접 경험한 장소만 모아 보는 폐쇄형 지도 SNS입니다.",
+      "광고성 리뷰 때문에 지도 서비스를 믿기 어려워졌습니다. 그래서 지인이 직접 경험한 장소만 모아 보는 폐쇄형 지도 SNS를 만들었습니다.",
       "iOS 개발자가 없는 팀이라 Kotlin Multiplatform과 Compose Multiplatform으로 Android와 iOS를 한 코드베이스로 만들어 두 스토어에 동시에 출시했습니다. 모바일 저장소 커밋의 88%가 제 커밋입니다.",
     ],
     features: [
@@ -135,8 +135,8 @@ export const projects: Project[] = [
     role: "공지 도메인 전체, 인증, 출석, CI/CD. 중앙 Android 파트장 겸임",
     status: "Google Play 출시, 운영 중 (v3.4.0)",
     summary: [
-      "대학 연합 IT 동아리 UMC의 공지, 출석, 스터디, 커뮤니티를 한곳에 모은 공식 앱입니다.",
-      "XML View로 만든 앱을 Jetpack Compose로 옮기고 있고, 5명 중 커밋 수 2위로 참여하고 있습니다.",
+      "대학 연합 IT 동아리 UMC의 공식 앱입니다. 공지, 출석, 스터디, 커뮤니티를 한곳에 모았습니다.",
+      "XML View로 만든 앱을 Jetpack Compose로 옮기는 중입니다. 5명 중 커밋 수는 제가 2위입니다.",
     ],
     features: [
       "공지 목록, 검색, 작성과 마크다운 에디터, 투표, 읽음 확인",
@@ -147,11 +147,11 @@ export const projects: Project[] = [
     ],
     myWork: [
       "프로젝트 구조와 Base 설계, 공통 컴포넌트",
-      "카카오·구글·이메일 로그인과 회원가입, 토큰 갱신",
+      "카카오, 구글, 이메일 로그인과 회원가입, 토큰 갱신",
       "공지 탭 전체를 Compose로 새로 구현 (마크다운 에디터, 형광펜, 작성 권한)",
-      "Splash, 로그인, 회원가입, 권한 화면의 XML에서 Compose 전환",
+      "Splash, 로그인, 회원가입, 권한 화면을 XML에서 Compose로 전환",
       "ML Kit GenAI(Gemini Nano)로 공지 요약과 다듬기",
-      "태그 기반 버전, 바뀐 모듈만 검사하는 PR 검사, 자동 배포와 릴리즈 노트",
+      "태그 기반 버전, 바뀐 모듈만 돌리는 PR 검사, 자동 배포와 릴리즈 노트",
     ],
     highlights: [
       "단발성 이벤트 유실을 잡는 Custom Lint 규칙을 만들어 배포 파이프라인에 붙였습니다.",
@@ -174,12 +174,12 @@ export const projects: Project[] = [
       { src: "/work/umc/admin-attendance.webp", w: 720, h: 1561, alt: "UMC 운영진 출석 관리. 세션별 출석률, 출석 인원, 승인 대기 인원과 승인 대기 명단 버튼", caption: "운영진 출석 관리" },
       { src: "/work/umc/login.webp", w: 720, h: 1561, alt: "UMC 로그인. 카카오와 Google 로그인, UMC 계정 로그인 버튼", caption: "로그인" },
     ],
-    imageNote: "Android 5명이 함께 만드는 팀 앱의 화면이고, 이 중 로그인, 공지, 출석이 제가 맡은 영역입니다. 개발 서버의 QA 테스트 계정으로 찍어 실제 이용자 정보는 없습니다.",
+    imageNote: "Android 5명이 함께 만드는 팀 앱의 화면입니다. 이 중 로그인, 공지, 출석을 제가 맡았습니다. 개발 서버의 QA 테스트 계정으로 찍어 실제 이용자 정보는 없습니다.",
   },
   {
     slug: "damoim",
     name: "다모임",
-    tagline: "동아리장과 운영진을 위한 동아리 운영 앱, 기획부터 서버 배포까지 혼자",
+    tagline: "동아리장과 운영진을 위한 동아리 운영 앱, 혼자 기획하고 서버까지 배포",
     kind: "개인",
     platform: "Android, iOS, 서버",
     period: "2026.07 - 2026.08",
@@ -188,8 +188,8 @@ export const projects: Project[] = [
     role: "기획, 디자인, 앱, 서버, DB, 배포 전부",
     status: "전 기능 구현과 서버 연동 완료, 미배포",
     summary: [
-      "공지는 오픈채팅에 묻히고, 자료는 카페에 흩어지고, 명부는 엑셀로 따로 관리되는 문제를 동아리를 운영하며 직접 겪었습니다. 대상을 동아리장과 운영진으로 좁혀 전용 앱으로 만들었습니다.",
-      "86개 화면을 직접 디자인하고, Compose Multiplatform 앱(Android, iOS)과 Spring Boot 서버를 만들어 집 PC에서 Docker로 돌렸습니다. 화면 42개, REST API 99개, 테이블 39개 규모입니다.",
+      "동아리를 운영하면서 공지는 오픈채팅에 묻히고 자료는 카페에 흩어지는 일을 겪었습니다. 명부는 엑셀로 따로 관리해야 했습니다. 대상을 동아리장과 운영진으로 좁혀 전용 앱을 만들었습니다.",
+      "86개 화면을 직접 디자인하고 Compose Multiplatform 앱(Android, iOS)과 Spring Boot 서버를 만들어 집 PC에서 Docker로 돌렸습니다. 화면 42개, REST API 99개, 테이블 39개 규모입니다.",
     ],
     features: [
       "카카오 로그인과 가입 코드 신청, 운영진 승인",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "Kakao SDK와 StoreKit은 Swift가 Kotlin 인터페이스를 구현해 등록하는 방식으로 붙여 commonMain에 SDK 의존성이 없습니다.",
-      "파일은 서버를 거치지 않고 스토리지로 바로 올라가고, 서버는 실제 크기만 다시 확인합니다.",
+      "파일은 서버를 거치지 않고 스토리지로 바로 올라갑니다. 서버는 실제 크기만 다시 확인합니다.",
     ],
     stack: ["Compose Multiplatform", "Ktor Client", "MVI-lite", "Kakao SDK", "StoreKit 2", "FCM", "Spring Boot 3", "Kotlin", "PostgreSQL 16", "JPA", "Flyway", "AWS S3", "Docker", "Tailscale"],
     links: [
@@ -241,8 +241,8 @@ export const projects: Project[] = [
     role: "게임 클라이언트, 서버, 배포, 자동 업데이트 전부",
     status: "이용자 약 500명, 인스타그램 릴스 누적 조회수 약 5만 회",
     summary: [
-      "바탕화면 위를 도트 포켓몬이 걸어다니고, 5-7분마다 야생 포켓몬이 나타나 잡을 수 있는 데스크톱 게임입니다.",
-      "Python 클라이언트와 FastAPI 서버를 혼자 만들었고, 서명·공증된 설치 파일과 자동 업데이트까지 붙여 배포하고 있습니다. 지금 약 500명이 이용하고 있고, 소개한 인스타그램 릴스는 누적 조회수 약 5만 회를 기록했습니다.",
+      "도트 포켓몬이 바탕화면 위를 걸어다니는 데스크톱 게임입니다. 5-7분마다 나타나는 야생 포켓몬을 잡을 수 있습니다.",
+      "Python 클라이언트와 FastAPI 서버를 혼자 만들었습니다. 서명과 공증을 거친 설치 파일에 자동 업데이트까지 붙여 배포하고 있습니다. 지금 이용자는 약 500명이고 게임을 소개한 인스타그램 릴스는 누적 조회수가 약 5만 회 나왔습니다.",
     ],
     features: [
       "바탕화면 위를 걷는 도트 포켓몬 (1,025종 중 982종)",
@@ -259,7 +259,7 @@ export const projects: Project[] = [
       "PyInstaller 빌드, Apple 서명과 공증, GitHub Actions 릴리즈와 매일 암호화 백업",
     ],
     highlights: [
-      "릴리즈 84개를 냈고, 설치 파일은 3,632번 내려받아졌습니다.",
+      "릴리즈 84개를 냈고 설치 파일은 3,632번 다운로드됐습니다.",
       "macOS에서는 Tk가 투명 창에 그리지 못해 CALayer로 직접 그렸습니다.",
       "교체 AI는 순서대로 내보내는 방식과 600판을 붙여 검증했습니다.",
     ],
@@ -294,15 +294,15 @@ export const projects: Project[] = [
     role: "기획, 디자인, 개발, 배포 전부",
     status: "v1.0.3 릴리즈",
     summary: [
-      "UMC 앱의 원격 설정(GitHub Pages의 JSON 파일)을 사람이 JSON을 직접 고치지 않고 폼으로 바꿀 수 있게 만든 데스크톱 앱입니다.",
-      "변경하면 PR을 만들고, 스키마 검증이 통과하면 머지와 배포까지 대신 진행합니다. Compose Multiplatform Desktop으로 만들었습니다.",
+      "UMC 앱의 원격 설정은 GitHub Pages에 있는 JSON 파일입니다. 이 JSON을 직접 고치지 않고 폼에서 바꿀 수 있게 만든 데스크톱 앱입니다.",
+      "설정을 바꾸면 PR을 엽니다. 스키마 검증을 통과하면 머지와 배포까지 대신 해 줍니다. Compose Multiplatform Desktop으로 만들었습니다.",
     ],
     features: [
       "GitHub 로그인 (OAuth Device Flow, gh CLI 토큰, PAT)",
       "설정 저장소 자동 생성: 스키마, 검증 워크플로, GitHub Pages, main 보호 규칙",
       "폼 편집과 Android 화면 미리보기, 입력 즉시 스키마 검사",
-      "실패하면 PR과 브랜치를 정리하는 안전한 적용",
-      "Android 프로젝트를 스캔해 화면 목록을 찾고 연동 코드 13개 파일 생성",
+      "적용에 실패하면 PR과 브랜치 정리",
+      "Android 프로젝트를 스캔해 화면 목록을 찾고 연동 코드 파일 13개 생성",
       "기기 안의 로컬 LLM(Gemma 3)으로 안내 문구 초안 작성",
     ],
     myWork: [
@@ -349,12 +349,12 @@ export const projects: Project[] = [
     myWork: [
       "멀티 모듈 Clean Architecture 세팅과 공통 TabBar, Dialog, Toast",
       "캘린더(일정 우선순위 정렬, 칸 높이 확장), 가계부, 마이페이지",
-      "주사·약 정확한 알람, FCM과 알림 탭 시 화면 이동",
+      "주사와 약의 정확한 알람, FCM과 알림 탭 시 화면 이동",
       "Compose 버전: 공통 컴포넌트, 홈의 오늘 일정 페이저, 남편 모드, 연타 방지 Modifier",
     ],
     highlights: [
       "라이브러리 없이 ViewPager2 코드를 분석해 겹치는 카드 캐러셀을 구현했습니다.",
-      "시스템 글꼴 크기에 영향받지 않는 타이포그래피로 큰 글꼴 기기의 레이아웃 깨짐을 막았습니다.",
+      "시스템 글꼴 크기에 영향받지 않는 타이포그래피로 글꼴을 크게 설정한 기기에서도 레이아웃이 깨지지 않게 했습니다.",
     ],
     stack: ["Kotlin", "Jetpack Compose", "XML View", "Clean Architecture", "MVVM", "멀티 모듈", "Hilt", "Retrofit", "Coroutines", "Flow", "DataStore", "FCM", "Firebase Analytics"],
     links: [
@@ -384,8 +384,8 @@ export const projects: Project[] = [
     role: "메인 홈, 검색, 북마크, 모집 글 상세, 아카이브, 마이페이지, 신고, 설정",
     status: "개발 완료, 팀 사정으로 정식 출시 전 마무리",
     summary: [
-      "14명이 함께한 첫 대규모 협업입니다. Activity만 다루던 때에 들어가 멀티 모듈, Hilt, Flow를 처음 익혔고, Android 3명 중 커밋 수 1위(611개)였습니다.",
-      "초기 프로토타입에서는 네이버 로그인과 네이버 지도를 붙였고, 본 앱에서는 모집과 활동 흐름의 주요 화면을 맡았습니다.",
+      "14명이 함께한 첫 대규모 협업입니다. Activity만 다루던 때에 들어가 멀티 모듈, Hilt, Flow를 처음 익혔습니다. Android 3명 중 커밋 수는 제가 1위(611개)였습니다.",
+      "초기 프로토타입에서는 네이버 로그인과 네이버 지도를 붙였고 본 앱에서는 모집과 활동 흐름의 주요 화면을 맡았습니다.",
     ],
     features: [
       "관심사 카테고리별 모임 탐색과 인원 필터",
@@ -422,7 +422,7 @@ export const projects: Project[] = [
     role: "Unity XR 클라이언트 전체, 백엔드 일부",
     status: "2026 AI·가상융합(XR) 서비스 개발자 경진대회 출품",
     summary: [
-      "XR 글래스를 쓰고 사물을 바라보면 앱 안에서 바로 사물을 인식하고, 제품 정보 카드를 시야에 띄워 주는 앱입니다.",
+      "XR 글래스를 쓰고 사물을 바라보면 앱 안에서 바로 인식해 제품 정보 카드를 시야에 띄워 주는 앱입니다.",
     ],
     features: [
       "시선이 350ms 머문 사물을 지목",
@@ -430,10 +430,10 @@ export const projects: Project[] = [
       "제품 정보 카드와 추적 ID 기반 캐시",
     ],
     myWork: [
-      "카메라 프레임 확보와 Unity Inference Engine으로 YOLO 모델 추론",
+      "카메라 프레임 확보, Unity Inference Engine으로 YOLO 모델 추론",
       "정보 카드 UI, 다른 물건에 정보가 잘못 붙던 문제를 추적 ID 캐시로 해결",
       "웹캠 테스트, Quest, 폰 세 가지 빌드",
-      "FastAPI와 Gemini 백엔드의 응답 지연 개선과 엔드포인트 보호",
+      "FastAPI와 Gemini 백엔드 응답 지연 개선, 엔드포인트 보호",
     ],
     stack: ["Unity", "C#", "OpenXR", "ONNX", "YOLO", "FastAPI", "Gemini API", "Docker"],
     links: [],
@@ -454,7 +454,7 @@ export const projects: Project[] = [
     status: "UMC 프로젝트, 100명 이상 체험",
     summary: [
       "스테이블코인 결제를 한국인에게 익숙한 방식으로 바꾸는 서비스입니다. 붕어빵을 살 때 계좌이체를 하듯 스테이블코인으로도 쉽게 결제하고 송금할 수 있게 하는 것이 목표입니다.",
-      "빗썸, 업비트처럼 여러 거래소에 흩어진 스테이블코인 자산을 스코이 한곳에서 보고, 송금과 충전, 자산 관리까지 할 수 있습니다. 대학생 핀테크 프로젝트로 시작해 100명 이상이 직접 써 봤습니다.",
+      "빗썸, 업비트처럼 여러 거래소에 흩어진 스테이블코인 자산을 스코이 한곳에서 보고 송금과 충전, 자산 관리까지 할 수 있습니다. 대학생 핀테크 프로젝트로 시작해 100명 이상이 직접 써 봤습니다.",
     ],
     features: [
       "휴대폰 인증, 간편 비밀번호, 거래소 연동 가이드로 이어지는 짧은 가입",
@@ -502,7 +502,7 @@ export const projects: Project[] = [
     year: 2026,
     role: "개발 전부",
     status: "v1.2.0 릴리즈, MIT",
-    summary: ["같은 공유기에 있는 내 기기끼리 서버 없이 파일을 주고받으려고 만들었습니다. 실행하면 같은 공유기의 기기를 찾고, 휴대폰은 QR로 접속합니다."],
+    summary: ["같은 공유기에 있는 내 기기끼리 서버 없이 파일을 주고받으려고 만들었습니다. 실행하면 같은 공유기의 기기를 찾고 휴대폰은 QR로 접속합니다."],
     features: ["기기 자동 발견 (2초마다 알리고 8초 조용하면 목록에서 제외)", "256KB씩 흘려보내 10GB도 메모리 일정", "QR과 landrop.local 주소로 접속", "클립보드 텍스트 공유와 폴더 기반 공유함", "보내기 전에 암호를 확인하는 사전 검증"],
     myWork: ["Python 표준 라이브러리 HTTP 서버와 UDP 브로드캐스트, mDNS", "오프라인에서도 동작하는 내장 웹 UI", "백신 오탐을 줄이는 PyInstaller 빌드 설정"],
     stack: ["Python", "HTTP", "UDP", "mDNS", "PyInstaller"],
@@ -513,7 +513,7 @@ export const projects: Project[] = [
   {
     slug: "spec-run",
     name: "spec-run",
-    tagline: "짧은 요청을 완료 기준이 담긴 계획으로 바꾸고, 승인 후 구현과 검증까지 끝내는 Claude Code 스킬",
+    tagline: "짧은 요청을 완료 기준이 담긴 계획으로 바꾸고 승인 후 구현과 검증까지 끝내는 Claude Code 스킬",
     kind: "개인",
     platform: "Claude Code 스킬",
     period: "2026.10",
@@ -521,27 +521,27 @@ export const projects: Project[] = [
     role: "스킬 설계와 작성, 검증 실험, 문서 전부",
     status: "GitHub 공개 (MIT)",
     summary: [
-      "Claude Code에 짧게 시키면 무엇을 어디까지 만들지 정하지 않은 채 파일부터 고치거나, 테스트를 돌렸는지 알 수 없는 채로 끝나는 일이 생깁니다. spec-run은 이 작업 순서를 하나로 고정하는 스킬입니다.",
-      "완료 기준이 들어간 계획을 먼저 보여주고, 사람이 승인하면 계획한 범위만 구현한 뒤 같은 턴에서 검증 명령을 실행하고 완료 기준별로 근거를 붙여 보고합니다.",
+      "Claude Code에 짧게 시키면 무엇을 어디까지 만들지 정하지 않고 파일부터 고치는 일이 생깁니다. 테스트를 돌렸는지 알 수 없는 채로 끝나기도 합니다. spec-run은 작업 순서를 하나로 고정하는 스킬입니다.",
+      "완료 기준이 들어간 계획을 먼저 보여줍니다. 사람이 승인하면 계획한 범위만 구현한 뒤 같은 턴에서 검증 명령을 실행하고 완료 기준별로 근거를 붙여 보고합니다.",
     ],
     features: [
       "/spec-run 한 줄 요청을 목표, 대상 파일, 제약, 가정, 완료 기준, 검증 명령이 담긴 계획 블록으로 변환",
       "요청에 없던 정책 결정을 코드보다 먼저 '가정'으로 보여 줘 승인 전에 고칠 수 있음",
       "승인한 대상 파일 밖을 고쳐야 하면 편집을 멈추고 계획을 다시 제시",
-      "마지막 수정 뒤에 계획에 적힌 검증 명령을 그대로 실행하고, 테스트를 지우거나 건너뛰지 않음",
+      "마지막 수정 뒤에 계획에 적힌 검증 명령을 그대로 실행하고 테스트를 지우거나 건너뛰지 않음",
       "계획 단계에서 검증을 한 번 돌려 원래 깨져 있던 테스트를 미리 구분",
       "검증을 통과했을 때만 대상 파일만 골라 커밋",
-      "변경이 크면 별도 에이전트의 코드 리뷰 수행",
+      "변경이 크면 별도 에이전트로 코드 리뷰",
     ],
     myWork: [
       "스킬 본문(SKILL.md) 설계와 작성",
       "npm 프로젝트, 테스트 러너가 없는 폴더, Android 라이브러리 샘플 2종에서 10가지 상황을 18번 실행해 동작 확인",
-      "Android와 Gradle에서 검증 명령별 실행 범위를 조사하고, 앞 모듈이 실패해도 끝까지 도는 --continue 규칙 추가",
+      "Android와 Gradle에서 검증 명령별 실행 범위 조사, 앞 모듈이 실패해도 끝까지 도는 --continue 규칙 추가",
       "설치와 사용법, 비교 실험, 실행해 보지 않은 경우까지 적은 README",
     ],
     highlights: [
-      "같은 기능 요청을 바로 구현과 spec-run으로 2번씩 실행했을 때, spec-run 쪽은 바뀐 파일이 계획에 적힌 2개와 같았고 검증 범위도 두 번 모두 같았습니다.",
-      "훅으로 막는 장치 없이 스킬의 지시만으로 동작하고, 지금까지의 실행에서 순서를 어긴 경우는 없었습니다.",
+      "같은 기능 요청을 바로 구현하는 방식과 spec-run으로 2번씩 실행해 보니 spec-run 쪽은 바뀐 파일이 계획에 적힌 2개와 일치했고 검증 범위도 두 번 모두 같았습니다.",
+      "훅으로 막는 장치 없이 스킬의 지시만으로 동작합니다. 지금까지 실행하면서 순서를 어긴 적은 없었습니다.",
     ],
     stack: ["Claude Code", "Agent Skills", "Markdown", "Gradle", "npm"],
     links: [{ label: "GitHub", href: "https://github.com/rudtjr1106/spec-run" }],
@@ -559,15 +559,15 @@ export const projects: Project[] = [
     status: "2026년 외주 프로젝트",
     summary: [
       "에이블리에 입점한 셀러를 위해 만든 마진 관리 엑셀입니다. 에이블리에서 내려받은 주문 엑셀을 그대로 붙여넣기만 하면 주문 한 줄마다 원가, 수수료, 택배비, 예상마진이 계산되고 주간·월간 합계가 나옵니다.",
-      "엑셀에 익숙하지 않은 사람도 매주 복사와 붙여넣기만 하면 되도록, 매크로 없이 수식만으로 만들었습니다.",
+      "엑셀에 익숙하지 않은 사람도 매주 복사와 붙여넣기만 하면 되도록 매크로 없이 수식만으로 만들었습니다.",
     ],
     features: [
-      "붙여넣은 주문 엑셀에서 제목 줄과 필요한 열을 스스로 찾기 (열 순서나 이름이 조금 달라도 동작)",
+      "붙여넣은 주문 엑셀에서 제목 줄과 필요한 열을 자동으로 찾기 (열 순서나 이름이 조금 달라도 동작)",
       "주문별 예상마진: 실결제액에서 상품원가, 결제·플랫폼 수수료, 택배비를 뺀 값",
       "반품 귀책(고객변심, 판매자귀책)을 고르면 반품 손익으로 바뀌고 집계에 바로 반영",
       "정산 엑셀을 붙여넣으면 상품주문번호로 연결해 확정마진과 예상 대비 차액 계산",
       "주간·월간 화면: 이번 주, 이번 달, 최근 8주, 월별 마진과 마진율",
-      "원가가 등록되지 않은 상품을 목록으로 뽑아 주고, 등록 전에는 집계에서 제외",
+      "원가가 등록되지 않은 상품은 목록으로 뽑아 주고 등록 전에는 집계에서 제외",
       "같은 주문이 다시 붙어도 한 번만 계산하고 최신 상태만 반영",
       "주문번호나 수령인으로 주문 찾기, 고객정보는 평소 가림",
     ],
@@ -585,7 +585,7 @@ export const projects: Project[] = [
   {
     slug: "hanbang-macro",
     name: "한의원 차팅 자동화",
-    tagline: "한의원의 반복적인 진료 기록(차팅) 작업을 자동화하는 프로그램",
+    tagline: "한의원에서 반복되는 진료 기록(차팅) 작업을 자동화하는 프로그램",
     kind: "외주",
     platform: "Windows",
     period: "2025",
@@ -608,11 +608,11 @@ export const projects: Project[] = [
     platform: "Android",
     period: "2024.02 - 2024.04",
     year: 2024,
-    role: "기획부터 개발까지 혼자 (131커밋)",
+    role: "혼자 기획하고 개발 (131커밋)",
     status: "개인 프로젝트",
-    summary: ["Firebase를 백엔드로 혼자 완성한 첫 개인 앱입니다. 멀티 모듈과 MVVM을 스스로 세팅해 본 프로젝트입니다."],
+    summary: ["Firebase를 백엔드로 혼자 완성한 첫 개인 앱입니다. 멀티 모듈과 MVVM도 스스로 세팅해 봤습니다."],
     features: ["이메일 가입과 인증, 자동 로그인", "오늘의 산문, 정렬, 검색", "산문 쓰기, 좋아요, 댓글", "토론장: 네이버 책 검색, 대댓글", "나만의 책, 신고, 알림 설정"],
-    myWork: ["presentation, domain, data 멀티 모듈과 buildSrc", "Firebase Auth, Realtime Database, FCM 연동 (Firestore에서 전환)", "Room으로 최근 검색어, 네이버 책 검색 API 연동"],
+    myWork: ["presentation, domain, data 멀티 모듈과 buildSrc", "Firebase Auth, Realtime Database, FCM 연동 (Firestore에서 전환)", "Room으로 최근 검색어 저장, 네이버 책 검색 API 연동"],
     stack: ["Kotlin", "XML View", "DataBinding", "멀티 모듈", "MVVM", "Hilt", "Coroutines", "Firebase", "Room"],
     links: [{ label: "GitHub", href: "https://github.com/rudtjr1106/DareStory" }],
     icon: icon("darestory", "달의 이야기 앱 아이콘"),
@@ -648,15 +648,15 @@ export const study: Study[] = [
     period: "2026.03 - 진행 중",
     featured: true,
     summary: [
-      "연구실에서 컨테이너 런타임별로 딥러닝 학습의 데이터 입력 성능이 어떻게 다른지 측정하고 있습니다.",
-      "선행 연구는 Enroot와 Apptainer의 차이를 입력과 GPU 연산이 합쳐진 값으로만 보고했습니다. 그 차이가 데이터를 읽고 디코딩해 GPU로 넘기는 입력 계층에서 오는지 보려고, 단일 노드에서 입력 계층만 따로 쟀습니다.",
+      "연구실에서 딥러닝 학습 중 데이터 입력 성능이 컨테이너 런타임마다 어떻게 다른지 측정하고 있습니다.",
+      "선행 연구는 Enroot와 Apptainer의 차이를 입력과 GPU 연산을 합친 값으로만 보고했습니다. 그 차이가 데이터를 읽고 디코딩해 GPU로 넘기는 입력 계층에서 오는지 보려고 단일 노드에서 입력 계층만 따로 쟀습니다.",
     ],
     topics: ["Apptainer", "Podman", "Enroot", "user namespace", "SIF와 squashfs", "overlayfs와 FUSE", "PyTorch DataLoader", "strace", "실험 설계"],
     sections: [
       {
         heading: "Apptainer를 뜯어본 것",
         items: [
-          "데몬 없음, 컨테이너 안팎이 같은 사용자, SIF 단일 파일, 격리보다 통합이라는 네 가지 특징을 커널 원리(user namespace, uid_map, NoNewPrivs, squashfuse)와 함께 정리",
+          "데몬 없음, 컨테이너 안팎이 같은 사용자, SIF 단일 파일, 격리보다 통합이라는 네 가지 특징을 커널 원리(user namespace, uid_map, NoNewPrivs, squashfuse)로 풀어 정리",
           "GPU 연동(--nv), Slurm과 MPI 연동, Docker, Podman, Apptainer, Enroot 비교",
           "uid_map, 네임스페이스 inode, SIF 안의 squashfs, 서명한 SIF의 변조 탐지를 직접 확인하는 데모",
         ],
@@ -672,14 +672,14 @@ export const study: Study[] = [
       {
         heading: "알게 된 것",
         items: [
-          "성능을 가른 건 런타임이 아니라 데이터 경로(커널 경로냐 FUSE냐)였습니다. ext4 대비 fuse-overlayfs의 파일 접근 처리량은 -64.8%였고, 런타임 사이 차이는 재현 오차(약 ±3%) 안이었습니다.",
+          "성능은 런타임이 아니라 데이터 경로(커널 경로냐 FUSE냐)에 따라 갈렸습니다. ext4 대비 fuse-overlayfs의 파일 접근 처리량은 -64.8%였고 런타임 사이 차이는 재현 오차(약 ±3%) 안이었습니다.",
           "비용은 데이터를 옮기는 read가 아니라 openat, newfstatat처럼 경로를 해석하는 단계에 있었습니다.",
-          "/proc을 도는 모니터링 도구가 일부 런타임에만 부담을 줘, 끄자 Apptainer가 5.06% 빨라졌습니다. 재는 도구가 결과를 바꿀 수 있다는 걸 배웠습니다.",
+          "/proc을 도는 모니터링 도구가 일부 런타임에만 부담을 줬고 이 도구를 끄자 Apptainer가 5.06% 빨라졌습니다. 재는 도구가 결과를 바꿀 수 있다는 걸 배웠습니다.",
           "빈 컨테이너 기동은 Apptainer가 133ms로 가장 빨랐지만 import torch까지 재면 2,392ms로 가장 느렸습니다. 무엇을 기동 완료로 보느냐에 따라 순위가 바뀝니다.",
         ],
       },
     ],
-    caveat: "단일 노드, 단일 GPU에서의 결과이고 원인 분석을 이어 가고 있습니다.",
+    caveat: "단일 노드, 단일 GPU에서 얻은 결과이고 원인은 계속 분석하고 있습니다.",
   },
   {
     slug: "docker-basics",
@@ -694,9 +694,9 @@ export const study: Study[] = [
       {
         heading: "정리한 내용",
         items: [
-          "컨테이너는 호스트 커널을 공유하고 namespace, cgroup, chroot로 프로세스 단위 격리를 만들어 하이퍼바이저 방식보다 성능 손실과 이미지 크기가 작다",
-          "컨테이너 안에서 무엇을 설치하고 바꿔도 호스트 OS에 영향이 없고, 배포는 이미지를 전달하는 것으로 끝난다",
-          "마이크로서비스는 모듈을 독립적으로 구성해 변화에 빠르게 대응하고, 보통 도커 스웜이나 쿠버네티스 같은 오케스트레이션 플랫폼으로 운영한다",
+          "컨테이너는 호스트 커널을 공유하고 namespace, cgroup, chroot로 프로세스 단위 격리를 하기 때문에 하이퍼바이저 방식보다 성능 손실이 적고 이미지도 작다",
+          "컨테이너 안에서 무엇을 설치하고 바꿔도 호스트 OS에 영향이 없고 배포는 이미지를 전달하면 끝난다",
+          "마이크로서비스는 모듈을 독립적으로 구성해 변화에 빠르게 대응하고 보통 도커 스웜이나 쿠버네티스 같은 오케스트레이션 플랫폼으로 운영한다",
         ],
       },
     ],
@@ -705,7 +705,7 @@ export const study: Study[] = [
   {
     slug: "compose-study",
     title: "Jetpack Compose 스터디",
-    short: "기본 컴포넌트부터 Recomposition, State Hoisting, CompositionLocal까지 날짜별 정리",
+    short: "기본 컴포넌트, Recomposition, State Hoisting, CompositionLocal을 날짜별로 정리",
     area: "Android",
     source: "GitHub Compose-Study",
     period: "2024.06 - 2024.07",
@@ -723,11 +723,11 @@ export const study: Study[] = [
   {
     slug: "overlap-viewpager",
     title: "라이브러리 없이 겹치는 카드 캐러셀 만들기",
-    short: "ViewPager2 내부 구조를 분석해 가운데 카드가 앞으로 나오는 캐러셀을 직접 구현",
+    short: "ViewPager2 내부 구조를 분석해 가운데 카드가 앞으로 나오는 캐러셀을 구현",
     area: "Android",
     source: "Notion",
     period: "2024",
-    summary: ["이전 프로젝트에서 라이브러리로도 구현하지 못했던 겹치는 카드 디자인을 허그에서 다시 만나, 이번에는 ViewPager2 코드를 직접 읽고 구현했습니다."],
+    summary: ["겹치는 카드 디자인은 이전 프로젝트에서 라이브러리를 써도 구현하지 못했습니다. 허그에서 같은 디자인이 다시 나와서 이번에는 ViewPager2 코드를 직접 읽고 구현했습니다."],
     topics: ["ViewPager2", "RecyclerView", "PageTransformer", "clipToPadding", "translationZ"],
     sections: [
       {
@@ -749,14 +749,14 @@ export const study: Study[] = [
     area: "Android",
     source: "Notion",
     period: "2024.03",
-    summary: ["서버 없이 Firebase만으로 앱을 만들며 막혔던 두 가지, 카카오 로그인과 실시간 채팅을 정리했습니다."],
+    summary: ["서버 없이 Firebase만으로 앱을 만들면서 카카오 로그인과 실시간 채팅 두 가지에서 막혔던 내용을 정리했습니다."],
     topics: ["Firebase Functions", "Custom Token", "Kakao 로그인", "Realtime Database", "suspendCoroutine", "callbackFlow"],
     sections: [
       {
         heading: "카카오 로그인",
         items: [
           "이메일과 회원번호로 가입시키는 방식은 기기 변경과 자동 로그인 문제로 버림",
-          "Firebase Functions에서 카카오 사용자 API를 호출하고, 서비스 계정으로 초기화해 Access Denied 해결",
+          "Firebase Functions에서 카카오 사용자 API를 호출하고 서비스 계정으로 초기화해 Access Denied 해결",
           "createCustomToken으로 받은 토큰으로 Firebase 로그인과 자동 로그인 구현",
         ],
       },
@@ -775,8 +775,8 @@ export const study: Study[] = [
     period: "2026.08 - 현재",
     featured: true,
     summary: [
-      "AndroidX 릴리스 노트, Android Developers Blog, Android Studio 블로그, Kotlin Blog, Android Weekly, compose-rules 릴리스 같은 공식 소스를 매주 모아, Compose와 Kotlin, 빌드, AI 도구와 관련된 변화만 한국어로 요약하는 자동화입니다.",
-      "항목마다 왜 중요한지와, Lint 규칙이나 코딩 에이전트 규칙으로 옮길 만한 후보를 함께 적어 둡니다.",
+      "AndroidX 릴리스 노트, Android Developers Blog, Android Studio 블로그, Kotlin Blog, Android Weekly, compose-rules 릴리스 같은 공식 소스를 매주 모으는 자동화입니다. 그중 Compose와 Kotlin, 빌드, AI 도구 관련 변화만 골라 한국어로 요약합니다.",
+      "항목마다 왜 중요한지, Lint 규칙이나 코딩 에이전트 규칙으로 옮길 만한 후보는 무엇인지 함께 적어 둡니다.",
     ],
     topics: ["Kotlin 2.4.20", "Compose 1.12", "Navigation 3", "Room 2.8", "compose-rules", "Android Studio", "DroidKaigi 2026"],
     sections: [
@@ -796,12 +796,12 @@ export const study: Study[] = [
   {
     slug: "umc-workbook",
     title: "UMC Android 워크북",
-    short: "챌린저로 풀고, 파트장으로 다시 쓴 주차별 Android 커리큘럼",
+    short: "챌린저로 풀고 파트장으로 다시 쓴 주차별 Android 커리큘럼",
     area: "협업·교육",
     source: "GitHub",
     period: "2025.09 - 2026.05",
     summary: [
-      "UMC 9기에서는 챌린저로 FLO 음악 앱을 클론하며 10주 워크북을 풀었고, 10기에서는 중앙 Android 파트장으로 XML 전용이던 공식 워크북을 XML과 Compose를 함께 다루고 옮기는 과정까지 배우는 커리큘럼으로 개편했습니다.",
+      "UMC 9기에서는 챌린저로 FLO 음악 앱을 클론하며 10주 워크북을 풀었습니다. 10기에서는 중앙 Android 파트장으로 XML 전용이던 공식 워크북을 개편했습니다. 새 커리큘럼에서는 XML과 Compose를 함께 다루고 옮기는 과정까지 배웁니다.",
     ],
     topics: ["XML View", "ViewPager", "RecyclerView", "Jetpack Compose", "Navigation Compose", "DataStore", "Retrofit"],
     sections: [
@@ -821,7 +821,7 @@ export const study: Study[] = [
     area: "Kotlin",
     source: "GitHub (PLUB2022)",
     period: "2022.09 - 2023.04",
-    summary: ["PLUB 팀원들과 『클린 코드』를 3주 동안 1장부터 10장까지 읽고, 『코틀린 인 액션』을 챕터별로 정리했습니다."],
+    summary: ["PLUB 팀원들과 『클린 코드』를 3주 동안 1장부터 10장까지 읽고 『코틀린 인 액션』은 챕터별로 정리했습니다."],
     topics: ["의미 있는 이름", "함수", "주석과 형식", "객체와 자료 구조", "오류 처리", "코틀린이란 무엇이며 왜 필요한가", "클래스, 객체, 인터페이스"],
     links: [
       { label: "클린 코드 스터디", href: "https://github.com/PLUB2022/Clean-Code-Study" },
