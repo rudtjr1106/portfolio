@@ -8,7 +8,7 @@ export function StudyHighlights() {
   const [lead, ...others] = featuredStudy;
   if (!lead) return null;
   return (
-    <Section id="study" title="공부한 것" lede="Notion과 GitHub에 정리한 노트 중 몇 가지입니다.">
+    <Section id="study" title="공부한 것" lede="Notion과 GitHub에 정리한 공부 기록 중 몇 개를 골랐습니다.">
       <div className="grid gap-4 lg:grid-cols-12 lg:gap-5">
         <div className="reveal grid lg:col-span-7">
           <StudyCard item={lead} variant="feature" tone="accent" />

@@ -19,7 +19,7 @@ export const shareImage = {
   url: "/opengraph-image.jpg",
   width: 1200,
   height: 630,
-  alt: "조경석, Android 개발자. 앱을 만들고, 출시하고, 운영합니다.",
+  alt: "Android 개발자, 조경석입니다. Kotlin으로 Android와 iOS 앱을 만들어 출시했습니다.",
 };
 
 /* ---------- URLs ---------- */

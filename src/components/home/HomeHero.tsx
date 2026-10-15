@@ -8,7 +8,7 @@ import { HeroDevices } from "./HeroDevices";
 
 const i = (n: number) => ({ ["--i" as string]: n }) as CSSProperties;
 
-/** "앱을 만들고, 출시하고, 운영합니다." -> ["앱을 만들고,", "출시하고, 운영합니다."] */
+/** "Android 개발자, 조경석입니다." -> ["Android 개발자,", "조경석입니다."] */
 function splitHeadline(h: string): [string, string] {
   const at = h.indexOf(", ");
   return at < 0 ? ["", h] : [h.slice(0, at + 1), h.slice(at + 2)];
@@ -38,7 +38,7 @@ export function HomeHero() {
               sizes="28px"
               className="size-7 rounded-full object-cover [box-shadow:0_0_0_1px_var(--edge)]"
             />
-            {person.role} {person.name}
+            {person.affiliation}
           </p>
 
           <h1 id="hero-title" className="rise mt-7 type-display text-ink" style={i(1)}>

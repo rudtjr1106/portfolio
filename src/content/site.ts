@@ -56,10 +56,11 @@ export const person = {
   name: "조경석",
   nameEn: "Kyungseok Cho",
   role: "Android 개발자",
-  headline: "앱을 만들고, 출시하고, 운영합니다.", // from the user's GitHub profile README
-  lede: "Kotlin으로 Android와 iOS 앱, 서버를 개발합니다. 지금까지 만든 것과 공부한 것을 모았습니다.",
+  headline: "Android 개발자, 조경석입니다.", // HomeHero splits at the first ", " into a muted line and a bold line
+  lede: "Kotlin으로 Android와 iOS 앱을 만들어 출시했습니다. 필요하면 서버와 데스크톱 앱도 만듭니다. 만든 것과 공부한 것을 여기에 모았습니다.",
+  affiliation: "명지대학교 컴퓨터공학과",
   about: [
-    "명지대학교 컴퓨터공학과에 다니는 Android 개발자입니다. XML View로 시작해 Jetpack Compose와 Kotlin Multiplatform으로 옮겨 왔습니다. 필요하면 서버와 데스크톱 앱도 직접 만듭니다.",
+    "명지대학교 컴퓨터공학과에 다니는 Android 개발자입니다. XML View로 시작해 Jetpack Compose와 Kotlin Multiplatform으로 옮겨 왔습니다. 서버나 데스크톱 앱도 필요하면 직접 만듭니다.",
     "지금은 UMC 중앙 Android 파트장으로 운영 앱을 만들고 전국 챌린저 교육을 맡고 있습니다. 연구실에서는 컨테이너 런타임의 데이터 입력 성능을 측정합니다.",
   ],
   now: [
@@ -90,7 +91,7 @@ export const projects: Project[] = [
     status: "Google Play, App Store 출시 후 운영 중",
     summary: [
       "광고성 리뷰 때문에 지도 서비스를 믿기 어려워졌습니다. 그래서 지인이 직접 경험한 장소만 모아 보는 폐쇄형 지도 SNS를 만들었습니다.",
-      "iOS 개발자가 없는 팀이라 Kotlin Multiplatform과 Compose Multiplatform으로 Android와 iOS를 한 코드베이스로 만들어 두 스토어에 동시에 출시했습니다. 모바일 저장소 커밋의 88%가 제 커밋입니다.",
+      "팀에 iOS 개발자가 없어서 Kotlin Multiplatform과 Compose Multiplatform으로 Android와 iOS를 한 코드베이스에서 만들었고 두 스토어에 동시에 출시했습니다. 모바일 저장소 커밋의 88%가 제 커밋입니다.",
     ],
     features: [
       "네이버 지도 위 핀과 클러스터링, 카테고리별 마커, 지도 검색",
@@ -101,12 +102,12 @@ export const projects: Project[] = [
     ],
     myWork: [
       "핀맵, 로그 등록, 마이피드, 스크랩, 에디터 아티클 등 전 기능 화면",
-      "Naver Map, 카카오·네이버 로그인, FCM, WebView의 iOS 연결(expect/actual)",
+      "Naver Map, 카카오·네이버 로그인, FCM, WebView를 expect/actual로 iOS에 연결",
       "commonMain을 domain, data, remote, local, ui 레이어로 나눈 구조 개편",
       "develop은 Play 내부 테스트와 TestFlight로, master는 두 스토어로 가는 자동 배포",
     ],
     highlights: [
-      "R8을 도입해 dex 메서드 81%, 다운로드 용량 50%를 줄였습니다.",
+      "R8을 도입하자 dex 메서드가 81%, 다운로드 용량이 50% 줄었습니다.",
       "핀업에서 핀유트로 리브랜딩하면서 Android 16(API 36)을 타겟팅했습니다.",
     ],
     stack: ["Kotlin Multiplatform", "Compose Multiplatform", "Koin", "Ktor", "Ktorfit", "Coil3", "Naver Map", "Kakao SDK", "FCM", "DataStore", "fastlane", "GitHub Actions"],
@@ -155,7 +156,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "단발성 이벤트 유실을 잡는 Custom Lint 규칙을 만들어 배포 파이프라인에 붙였습니다.",
-      "앱 배포 없이 안내를 바꾸는 원격 설정을 GitHub Pages와 JSON 스키마 검사로 만들었습니다.",
+      "앱을 배포하지 않고도 안내를 바꾸려고 GitHub Pages와 JSON 스키마 검사로 원격 설정을 만들었습니다.",
     ],
     stack: ["Kotlin", "Jetpack Compose", "멀티 모듈", "Clean Architecture", "Hilt", "Retrofit", "Coroutines", "Flow", "DataStore", "ML Kit GenAI", "Custom Lint", "Macrobenchmark", "GitHub Actions"],
     links: [
@@ -174,7 +175,7 @@ export const projects: Project[] = [
       { src: "/work/umc/admin-attendance.webp", w: 720, h: 1561, alt: "UMC 운영진 출석 관리. 세션별 출석률, 출석 인원, 승인 대기 인원과 승인 대기 명단 버튼", caption: "운영진 출석 관리" },
       { src: "/work/umc/login.webp", w: 720, h: 1561, alt: "UMC 로그인. 카카오와 Google 로그인, UMC 계정 로그인 버튼", caption: "로그인" },
     ],
-    imageNote: "Android 5명이 함께 만드는 팀 앱의 화면입니다. 이 중 로그인, 공지, 출석을 제가 맡았습니다. 개발 서버의 QA 테스트 계정으로 찍어 실제 이용자 정보는 없습니다.",
+    imageNote: "Android 5명이 함께 만드는 팀 앱이고 그중 로그인, 공지, 출석을 제가 맡았습니다. 화면은 개발 서버의 QA 테스트 계정으로 찍어서 실제 이용자 정보가 없습니다.",
   },
   {
     slug: "damoim",
@@ -188,8 +189,8 @@ export const projects: Project[] = [
     role: "기획, 디자인, 앱, 서버, DB, 배포 전부",
     status: "전 기능 구현과 서버 연동 완료, 미배포",
     summary: [
-      "동아리를 운영하면서 공지는 오픈채팅에 묻히고 자료는 카페에 흩어지는 일을 겪었습니다. 명부는 엑셀로 따로 관리해야 했습니다. 대상을 동아리장과 운영진으로 좁혀 전용 앱을 만들었습니다.",
-      "86개 화면을 직접 디자인하고 Compose Multiplatform 앱(Android, iOS)과 Spring Boot 서버를 만들어 집 PC에서 Docker로 돌렸습니다. 화면 42개, REST API 99개, 테이블 39개 규모입니다.",
+      "동아리를 운영할 때 공지는 오픈채팅에 묻히고 자료는 카페에 흩어졌습니다. 명부는 엑셀로 따로 관리해야 했습니다. 그래서 대상을 동아리장과 운영진으로 좁혀 전용 앱을 만들었습니다.",
+      "86개 화면을 직접 디자인했습니다. 앱은 Compose Multiplatform으로 Android와 iOS를 함께 만들었고 서버는 Spring Boot로 짜서 집 PC에서 Docker로 돌렸습니다. 화면 42개, REST API 99개, 테이블 39개 규모입니다.",
     ],
     features: [
       "카카오 로그인과 가입 코드 신청, 운영진 승인",
@@ -200,13 +201,13 @@ export const projects: Project[] = [
       "구독과 인앱 결제, FCM 푸시",
     ],
     myWork: [
-      "기획과 디자인 시안 86개 화면",
+      "기획과 디자인 시안(86개 화면)",
       "CMP 앱: 직접 만든 MVI-lite로 38개 화면 패턴 통일, expect/actual 브릿지 8종",
       "Spring Boot 서버: 카카오 OAuth, JWT 리프레시 토큰 회전, presigned URL 업로드, 레이트 리밋",
       "PostgreSQL과 Flyway 마이그레이션, Docker Compose 자가 호스팅, Tailscale Funnel",
     ],
     highlights: [
-      "Kakao SDK와 StoreKit은 Swift가 Kotlin 인터페이스를 구현해 등록하는 방식으로 붙여 commonMain에 SDK 의존성이 없습니다.",
+      "commonMain에는 SDK 의존성이 없습니다. Kakao SDK와 StoreKit은 Swift가 Kotlin 인터페이스를 구현해 등록하는 방식으로 붙였습니다.",
       "파일은 서버를 거치지 않고 스토리지로 바로 올라갑니다. 서버는 실제 크기만 다시 확인합니다.",
     ],
     stack: ["Compose Multiplatform", "Ktor Client", "MVI-lite", "Kakao SDK", "StoreKit 2", "FCM", "Spring Boot 3", "Kotlin", "PostgreSQL 16", "JPA", "Flyway", "AWS S3", "Docker", "Tailscale"],
@@ -242,7 +243,7 @@ export const projects: Project[] = [
     status: "이용자 약 500명, 인스타그램 릴스 누적 조회수 약 5만 회",
     summary: [
       "도트 포켓몬이 바탕화면 위를 걸어다니는 데스크톱 게임입니다. 5-7분마다 나타나는 야생 포켓몬을 잡을 수 있습니다.",
-      "Python 클라이언트와 FastAPI 서버를 혼자 만들었습니다. 서명과 공증을 거친 설치 파일에 자동 업데이트까지 붙여 배포하고 있습니다. 지금 이용자는 약 500명이고 게임을 소개한 인스타그램 릴스는 누적 조회수가 약 5만 회 나왔습니다.",
+      "Python 클라이언트와 FastAPI 서버를 혼자 만들었습니다. 설치 파일은 서명과 공증을 거치고 자동 업데이트도 붙여 배포하고 있습니다. 지금 이용자는 약 500명이고 게임을 소개한 인스타그램 릴스는 누적 조회수가 약 5만 회 나왔습니다.",
     ],
     features: [
       "바탕화면 위를 걷는 도트 포켓몬 (1,025종 중 982종)",
@@ -294,8 +295,8 @@ export const projects: Project[] = [
     role: "기획, 디자인, 개발, 배포 전부",
     status: "v1.0.3 릴리즈",
     summary: [
-      "UMC 앱의 원격 설정은 GitHub Pages에 있는 JSON 파일입니다. 이 JSON을 직접 고치지 않고 폼에서 바꿀 수 있게 만든 데스크톱 앱입니다.",
-      "설정을 바꾸면 PR을 엽니다. 스키마 검증을 통과하면 머지와 배포까지 대신 해 줍니다. Compose Multiplatform Desktop으로 만들었습니다.",
+      "UMC 앱의 원격 설정은 GitHub Pages에 있는 JSON 파일입니다. 이 JSON을 손으로 고치지 않고 폼에서 바꿀 수 있게 데스크톱 앱을 만들었습니다.",
+      "설정을 바꾸면 PR을 엽니다. 스키마 검증을 통과하면 머지와 배포까지 대신 해 줍니다. Compose Multiplatform Desktop으로 개발했습니다.",
     ],
     features: [
       "GitHub 로그인 (OAuth Device Flow, gh CLI 토큰, PAT)",
@@ -337,7 +338,7 @@ export const projects: Project[] = [
     status: "Google Play 출시, 약 6개월 운영, 약 100명 실사용",
     summary: [
       "난임 치료를 받는 부부가 주사, 약, 병원 일정과 비용, 하루 기록을 함께 남기는 앱입니다.",
-      "XML View로 출시한 뒤 Jetpack Compose와 feature 단위 멀티 모듈로 다시 만들었습니다. 서버 운영비 부담으로 서비스를 닫았습니다.",
+      "XML View로 출시한 뒤 Jetpack Compose와 feature 단위 멀티 모듈로 다시 만들었습니다. 다만 서버 운영비가 부담돼 서비스는 닫았습니다.",
     ],
     features: [
       "온보딩과 배우자 공유 코드로 부부 연결",
@@ -354,7 +355,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "라이브러리 없이 ViewPager2 코드를 분석해 겹치는 카드 캐러셀을 구현했습니다.",
-      "시스템 글꼴 크기에 영향받지 않는 타이포그래피로 글꼴을 크게 설정한 기기에서도 레이아웃이 깨지지 않게 했습니다.",
+      "타이포그래피가 시스템 글꼴 크기에 영향받지 않게 만들었습니다. 그래서 글꼴을 크게 설정한 기기에서도 레이아웃이 깨지지 않습니다.",
     ],
     stack: ["Kotlin", "Jetpack Compose", "XML View", "Clean Architecture", "MVVM", "멀티 모듈", "Hilt", "Retrofit", "Coroutines", "Flow", "DataStore", "FCM", "Firebase Analytics"],
     links: [
@@ -375,7 +376,7 @@ export const projects: Project[] = [
   {
     slug: "plub",
     name: "PLUB",
-    tagline: "취미와 관심사로 사람을 잇는 소모임 커뮤니티 앱",
+    tagline: "취미와 관심사가 맞는 사람끼리 모이는 소모임 커뮤니티 앱",
     kind: "팀",
     platform: "Android",
     period: "2022.01 - 2023.06",
@@ -384,7 +385,7 @@ export const projects: Project[] = [
     role: "메인 홈, 검색, 북마크, 모집 글 상세, 아카이브, 마이페이지, 신고, 설정",
     status: "개발 완료, 팀 사정으로 정식 출시 전 마무리",
     summary: [
-      "14명이 함께한 첫 대규모 협업입니다. Activity만 다루던 때에 들어가 멀티 모듈, Hilt, Flow를 처음 익혔습니다. Android 3명 중 커밋 수는 제가 1위(611개)였습니다.",
+      "14명이 함께한 첫 대규모 협업입니다. Activity만 다루던 때에 합류해 멀티 모듈, Hilt, Flow를 여기서 처음 익혔습니다. Android 3명 중 커밋 수는 제가 1위(611개)였습니다.",
       "초기 프로토타입에서는 네이버 로그인과 네이버 지도를 붙였고 본 앱에서는 모집과 활동 흐름의 주요 화면을 맡았습니다.",
     ],
     features: [
@@ -422,7 +423,7 @@ export const projects: Project[] = [
     role: "Unity XR 클라이언트 전체, 백엔드 일부",
     status: "2026 AI·가상융합(XR) 서비스 개발자 경진대회 출품",
     summary: [
-      "XR 글래스를 쓰고 사물을 바라보면 앱 안에서 바로 인식해 제품 정보 카드를 시야에 띄워 주는 앱입니다.",
+      "XR 글래스를 쓰고 사물을 바라보면 제품 정보 카드를 시야에 띄워 주는 앱입니다. 사물은 앱 안에서 바로 인식합니다.",
     ],
     features: [
       "시선이 350ms 머문 사물을 지목",
@@ -433,7 +434,7 @@ export const projects: Project[] = [
       "카메라 프레임 확보, Unity Inference Engine으로 YOLO 모델 추론",
       "정보 카드 UI, 다른 물건에 정보가 잘못 붙던 문제를 추적 ID 캐시로 해결",
       "웹캠 테스트, Quest, 폰 세 가지 빌드",
-      "FastAPI와 Gemini 백엔드 응답 지연 개선, 엔드포인트 보호",
+      "FastAPI와 Gemini 백엔드의 응답 지연을 줄이고 엔드포인트를 보호",
     ],
     stack: ["Unity", "C#", "OpenXR", "ONNX", "YOLO", "FastAPI", "Gemini API", "Docker"],
     links: [],
@@ -454,14 +455,14 @@ export const projects: Project[] = [
     status: "UMC 프로젝트, 100명 이상 체험",
     summary: [
       "스테이블코인 결제를 한국인에게 익숙한 방식으로 바꾸는 서비스입니다. 붕어빵을 살 때 계좌이체를 하듯 스테이블코인으로도 쉽게 결제하고 송금할 수 있게 하는 것이 목표입니다.",
-      "빗썸, 업비트처럼 여러 거래소에 흩어진 스테이블코인 자산을 스코이 한곳에서 보고 송금과 충전, 자산 관리까지 할 수 있습니다. 대학생 핀테크 프로젝트로 시작해 100명 이상이 직접 써 봤습니다.",
+      "빗썸, 업비트처럼 여러 거래소에 흩어진 스테이블코인 자산을 스코이 한곳에서 볼 수 있습니다. 송금과 충전, 자산 관리도 같은 앱에서 합니다. 대학생 핀테크 프로젝트로 시작해 100명 이상이 직접 써 봤습니다.",
     ],
     features: [
       "휴대폰 인증, 간편 비밀번호, 거래소 연동 가이드로 이어지는 짧은 가입",
       "간편 비밀번호와 생체 인증 로그인",
       "여러 거래소의 USDT, USDC 잔액을 한눈에 보고 송금, 자주 쓰는 주소록",
       "스테이블코인 충전과 현금 전환, 시세 차트",
-      "내 지갑: 원화 입출금과 송금·충전 기록을 한곳에서",
+      "내 지갑: 원화 입출금과 송금·충전 기록을 한곳에서 확인",
       "디페깅(가격 이탈)을 대신 감시하고 알림",
       "처음 보는 용어는 툴팁과 쉬운 표현으로 안내",
       "거래소 API 키 연동 관리, API Secret Key 암호화 저장",
@@ -540,7 +541,7 @@ export const projects: Project[] = [
       "설치와 사용법, 비교 실험, 실행해 보지 않은 경우까지 적은 README",
     ],
     highlights: [
-      "같은 기능 요청을 바로 구현하는 방식과 spec-run으로 2번씩 실행해 보니 spec-run 쪽은 바뀐 파일이 계획에 적힌 2개와 일치했고 검증 범위도 두 번 모두 같았습니다.",
+      "같은 기능 요청을 바로 구현하는 방식과 spec-run으로 2번씩 실행해 비교했습니다. spec-run 쪽은 바뀐 파일이 계획에 적힌 2개와 일치했고 검증 범위도 두 번 모두 같았습니다.",
       "훅으로 막는 장치 없이 스킬의 지시만으로 동작합니다. 지금까지 실행하면서 순서를 어긴 적은 없었습니다.",
     ],
     stack: ["Claude Code", "Agent Skills", "Markdown", "Gradle", "npm"],
@@ -558,7 +559,7 @@ export const projects: Project[] = [
     role: "시트 구성과 수식 설계, 제작 전부",
     status: "2026년 외주 프로젝트",
     summary: [
-      "에이블리에 입점한 셀러를 위해 만든 마진 관리 엑셀입니다. 에이블리에서 내려받은 주문 엑셀을 그대로 붙여넣기만 하면 주문 한 줄마다 원가, 수수료, 택배비, 예상마진이 계산되고 주간·월간 합계가 나옵니다.",
+      "에이블리에 입점한 셀러를 위해 만든 마진 관리 엑셀입니다. 에이블리에서 내려받은 주문 엑셀을 그대로 붙여넣으면 주문 한 줄마다 원가, 수수료, 택배비, 예상마진이 계산되고 주간·월간 합계가 나옵니다.",
       "엑셀에 익숙하지 않은 사람도 매주 복사와 붙여넣기만 하면 되도록 매크로 없이 수식만으로 만들었습니다.",
     ],
     features: [
@@ -610,7 +611,7 @@ export const projects: Project[] = [
     year: 2024,
     role: "혼자 기획하고 개발 (131커밋)",
     status: "개인 프로젝트",
-    summary: ["Firebase를 백엔드로 혼자 완성한 첫 개인 앱입니다. 멀티 모듈과 MVVM도 스스로 세팅해 봤습니다."],
+    summary: ["Firebase를 백엔드로 써서 혼자 완성한 첫 개인 앱입니다. 멀티 모듈과 MVVM도 직접 세팅해 봤습니다."],
     features: ["이메일 가입과 인증, 자동 로그인", "오늘의 산문, 정렬, 검색", "산문 쓰기, 좋아요, 댓글", "토론장: 네이버 책 검색, 대댓글", "나만의 책, 신고, 알림 설정"],
     myWork: ["presentation, domain, data 멀티 모듈과 buildSrc", "Firebase Auth, Realtime Database, FCM 연동 (Firestore에서 전환)", "Room으로 최근 검색어 저장, 네이버 책 검색 API 연동"],
     stack: ["Kotlin", "XML View", "DataBinding", "멀티 모듈", "MVVM", "Hilt", "Coroutines", "Firebase", "Room"],
@@ -621,7 +622,7 @@ export const projects: Project[] = [
   {
     slug: "volunteer",
     name: "봉사활동 앱",
-    tagline: "1365 봉사 정보 조회와 신청, 기록 캘린더를 담은 학부 팀 프로젝트",
+    tagline: "1365 봉사 정보 조회와 신청, 봉사 기록 캘린더를 구현한 학부 팀 프로젝트",
     kind: "팀",
     platform: "Android",
     period: "2021.10 - 2021.12",
@@ -649,7 +650,7 @@ export const study: Study[] = [
     featured: true,
     summary: [
       "연구실에서 딥러닝 학습 중 데이터 입력 성능이 컨테이너 런타임마다 어떻게 다른지 측정하고 있습니다.",
-      "선행 연구는 Enroot와 Apptainer의 차이를 입력과 GPU 연산을 합친 값으로만 보고했습니다. 그 차이가 데이터를 읽고 디코딩해 GPU로 넘기는 입력 계층에서 오는지 보려고 단일 노드에서 입력 계층만 따로 쟀습니다.",
+      "선행 연구는 Enroot와 Apptainer의 차이를 입력과 GPU 연산을 합친 값으로만 보고했습니다. 그 차이가 입력 계층(데이터를 읽고 디코딩해 GPU로 넘기는 부분)에서 오는지 보려고 단일 노드에서 입력 계층만 따로 쟀습니다.",
     ],
     topics: ["Apptainer", "Podman", "Enroot", "user namespace", "SIF와 squashfs", "overlayfs와 FUSE", "PyTorch DataLoader", "strace", "실험 설계"],
     sections: [
@@ -664,7 +665,7 @@ export const study: Study[] = [
       {
         heading: "실험",
         items: [
-          "Ryzen 9 9950X, RTX 5070, Ubuntu 24.04에서 host, Podman, Apptainer, Enroot를 마운트 방식까지 나눈 7개 조건 비교",
+          "Ryzen 9 9950X, RTX 5070, Ubuntu 24.04에서 host, Podman, Apptainer, Enroot를 마운트 방식까지 나눠 7개 조건으로 비교",
           "GPU 연산을 뺀 공급 처리량, 실제 학습 처리량, 입력 비용을 0으로 둔 수요 처리량을 나눠 측정",
           "시나리오 스크립트, 실행기, 보고서 생성기로 된 벤치마크 킷 container-dl-bench를 직접 제작",
         ],
@@ -674,12 +675,12 @@ export const study: Study[] = [
         items: [
           "성능은 런타임이 아니라 데이터 경로(커널 경로냐 FUSE냐)에 따라 갈렸습니다. ext4 대비 fuse-overlayfs의 파일 접근 처리량은 -64.8%였고 런타임 사이 차이는 재현 오차(약 ±3%) 안이었습니다.",
           "비용은 데이터를 옮기는 read가 아니라 openat, newfstatat처럼 경로를 해석하는 단계에 있었습니다.",
-          "/proc을 도는 모니터링 도구가 일부 런타임에만 부담을 줬고 이 도구를 끄자 Apptainer가 5.06% 빨라졌습니다. 재는 도구가 결과를 바꿀 수 있다는 걸 배웠습니다.",
+          "/proc을 도는 모니터링 도구는 일부 런타임에만 부담을 줬습니다. 이 도구를 끄자 Apptainer가 5.06% 빨라졌습니다. 재는 도구가 결과를 바꿀 수 있다는 걸 배웠습니다.",
           "빈 컨테이너 기동은 Apptainer가 133ms로 가장 빨랐지만 import torch까지 재면 2,392ms로 가장 느렸습니다. 무엇을 기동 완료로 보느냐에 따라 순위가 바뀝니다.",
         ],
       },
     ],
-    caveat: "단일 노드, 단일 GPU에서 얻은 결과이고 원인은 계속 분석하고 있습니다.",
+    caveat: "단일 노드, 단일 GPU에서 얻은 결과입니다. 원인은 계속 분석하고 있습니다.",
   },
   {
     slug: "docker-basics",
@@ -710,7 +711,7 @@ export const study: Study[] = [
     source: "GitHub Compose-Study",
     period: "2024.06 - 2024.07",
     featured: true,
-    summary: ["XML View만 쓰다 Compose로 넘어가며 2주 동안 날짜별로 정리한 스터디 노트입니다. 스터디를 마친 직후 허그를 Compose로 다시 만들기 시작했습니다."],
+    summary: ["XML View만 쓰다가 Compose로 넘어가면서 2주 동안 날짜별로 정리한 스터디 노트입니다. 스터디를 마친 직후 허그를 Compose로 다시 만들기 시작했습니다."],
     topics: ["Text, Surface, Box, Row, Column", "BoxWithConstraints", "Slot API", "Recomposition", "ConstraintLayout", "Dialog, SnackBar, BottomAppBar", "State Hoisting", "Crossfade", "ViewModel과 LiveData", "CompositionLocal과 Theme"],
     sections: [
       { heading: "6월 20일, 21일", items: ["Text, Surface, Box, Row, Column, BoxWithConstraints, Image", "CheckBox와 Slot API"] },
@@ -723,7 +724,7 @@ export const study: Study[] = [
   {
     slug: "overlap-viewpager",
     title: "라이브러리 없이 겹치는 카드 캐러셀 만들기",
-    short: "ViewPager2 내부 구조를 분석해 가운데 카드가 앞으로 나오는 캐러셀을 구현",
+    short: "ViewPager2 내부 구조를 뜯어보고 가운데 카드가 앞으로 나오는 캐러셀을 구현",
     area: "Android",
     source: "Notion",
     period: "2024",
@@ -738,7 +739,7 @@ export const study: Study[] = [
           "OnPageChangeCallback에서 translationZ를 조정해 가운데 카드를 맨 위로",
         ],
       },
-      { heading: "헤맨 부분", items: ["when 분기 순서를 잘못 두면 오른쪽 두 번째 카드 처리로 가지 않아 판별 순서를 바로잡았습니다."] },
+      { heading: "헤맨 부분", items: ["when 분기 순서를 잘못 두자 오른쪽 두 번째 카드 처리로 가지 않았습니다. 그래서 판별 순서를 바로잡았습니다."] },
     ],
     related: "hugg",
   },
@@ -775,7 +776,7 @@ export const study: Study[] = [
     period: "2026.08 - 현재",
     featured: true,
     summary: [
-      "AndroidX 릴리스 노트, Android Developers Blog, Android Studio 블로그, Kotlin Blog, Android Weekly, compose-rules 릴리스 같은 공식 소스를 매주 모으는 자동화입니다. 그중 Compose와 Kotlin, 빌드, AI 도구 관련 변화만 골라 한국어로 요약합니다.",
+      "공식 소스를 매주 모으는 자동화입니다. AndroidX 릴리스 노트, Android Developers Blog, Android Studio 블로그, Kotlin Blog, Android Weekly, compose-rules 릴리스 등에서 Compose와 Kotlin, 빌드, AI 도구 관련 변화만 골라 한국어로 요약합니다.",
       "항목마다 왜 중요한지, Lint 규칙이나 코딩 에이전트 규칙으로 옮길 만한 후보는 무엇인지 함께 적어 둡니다.",
     ],
     topics: ["Kotlin 2.4.20", "Compose 1.12", "Navigation 3", "Room 2.8", "compose-rules", "Android Studio", "DroidKaigi 2026"],
@@ -801,12 +802,12 @@ export const study: Study[] = [
     source: "GitHub",
     period: "2025.09 - 2026.05",
     summary: [
-      "UMC 9기에서는 챌린저로 FLO 음악 앱을 클론하며 10주 워크북을 풀었습니다. 10기에서는 중앙 Android 파트장으로 XML 전용이던 공식 워크북을 개편했습니다. 새 커리큘럼에서는 XML과 Compose를 함께 다루고 옮기는 과정까지 배웁니다.",
+      "UMC 9기에서는 챌린저로 FLO 음악 앱을 클론하며 10주 워크북을 풀었습니다. 10기에서는 중앙 Android 파트장을 맡아 XML 전용이던 공식 워크북을 개편했습니다. 새 커리큘럼에서는 XML과 Compose를 함께 다루고 XML에서 Compose로 옮기는 과정까지 배웁니다.",
     ],
     topics: ["XML View", "ViewPager", "RecyclerView", "Jetpack Compose", "Navigation Compose", "DataStore", "Retrofit"],
     sections: [
       { heading: "9기 챌린저 (2025.09 - 2025.11)", items: ["FLO 음악 앱 클론, 1-10주차 미션", "XML, ViewPager, RecyclerView"] },
-      { heading: "10기 워크북 (2026.03 - 2026.05)", items: ["신발 쇼핑 앱 클론: 홈, 구매, 위시리스트, 장바구니, 프로필", "초반은 XML과 Navigation, 9주차에는 Compose와 Navigation Compose로 전환", "DataStore, Retrofit, Coil"] },
+      { heading: "10기 워크북 (2026.03 - 2026.05)", items: ["신발 쇼핑 앱 클론: 홈, 구매, 위시리스트, 장바구니, 프로필", "초반에는 XML과 Navigation, 9주차에는 Compose와 Navigation Compose로 전환", "DataStore, Retrofit, Coil"] },
     ],
     links: [
       { label: "10기 워크북", href: "https://github.com/rudtjr1106/UMC-10th-Android-workbook" },
@@ -833,10 +834,10 @@ export const study: Study[] = [
 export const record = {
   education: [
     { when: "2020.03 - 2027.02", what: "명지대학교 컴퓨터공학과", detail: "2027년 2월 졸업 예정, 전공 학점 3.94 / 4.5" },
-    { when: "2026.03 - 현재", what: "지능형데이터처리 연구실 학부연구생", detail: "컨테이너 런타임별 학습 데이터 입력 파이프라인 성능 비교 연구" },
+    { when: "2026.03 - 현재", what: "지능형데이터처리 연구실 학부연구생", detail: "컨테이너 런타임별로 학습 데이터 입력 파이프라인 성능을 비교하는 연구" },
   ],
   activities: [
-    { when: "UMC 10기", what: "UMC 중앙 Android 파트장", detail: "전국 28개 대학, 약 1,000명 규모의 대학 연합 IT 동아리. 공식 Android 워크북을 개편하고 전국 챌린저 교육을 맡고 있습니다." },
+    { when: "UMC 10기", what: "UMC 중앙 Android 파트장", detail: "전국 28개 대학, 약 1,000명 규모의 대학 연합 IT 동아리입니다. 공식 Android 워크북을 개편하고 전국 챌린저 교육을 맡고 있습니다." },
     { when: "UMC 9기", what: "UMC Android 챌린저", detail: "팀 프로젝트로 데모데이 우수상" },
     { when: "19기 - 23기", what: "대학 연합 봉사 동아리 발룬타스 부회장, 회장", detail: "봉사 활동 약 310시간" },
   ],
