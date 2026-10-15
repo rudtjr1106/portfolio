@@ -96,7 +96,7 @@ export function Button({
   );
 }
 
-/** Quiet inline link with a trailing arrow, e.g. "프로젝트 14개 모두 보기". */
+/** Quiet inline link with a trailing arrow, e.g. "프로젝트 15개 모두 보기". */
 export function TextLink({ href, children, className = "" }: { href: string; children: ReactNode; className?: string }) {
   const web = /^https?:/.test(href);
   const cls = `group inline-flex items-center gap-1.5 rounded-full text-[15px] font-semibold text-ink transition-colors hover:text-accent-ink ${className}`;

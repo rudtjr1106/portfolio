@@ -10,7 +10,8 @@
 # 조경석
 
 **Android 개발자**<br />
-앱을 만들고, 출시하고, 운영합니다.
+Kotlin으로 Android와 iOS 앱을 만들어 출시했습니다.<br />
+필요하면 서버와 데스크톱 앱도 만듭니다.
 
 <br />
 
@@ -28,7 +29,7 @@
 
 | 페이지 | 담긴 내용 |
 |---|---|
-| [**만든 것**](https://gyeongseok.vercel.app/projects) | 팀으로 출시한 앱부터 혼자 만든 도구, 외주 작업까지 |
+| [**만든 것**](https://gyeongseok.vercel.app/projects) | 팀 프로젝트, 개인 프로젝트, 외주 작업 |
 | [**공부한 것**](https://gyeongseok.vercel.app/study) | Notion과 GitHub에 정리해 온 공부 기록 |
 | [**소개**](https://gyeongseok.vercel.app/about) | 학력, 활동, 수상, 다루는 기술 |
 
@@ -46,12 +47,12 @@
     <td align="center" width="20%">
       <a href="https://gyeongseok.vercel.app/projects/umc"><img src="public/work/icons/umc.webp" width="72" alt="UMC 운영 앱" /></a><br />
       <b>UMC 운영 앱</b><br />
-      <sub>전국 28개 대학 IT 동아리 운영 앱</sub>
+      <sub>전국 28개 대학 연합 IT 동아리 운영 앱</sub>
     </td>
     <td align="center" width="20%">
       <a href="https://gyeongseok.vercel.app/projects/damoim"><img src="public/work/icons/damoim.webp" width="72" alt="다모임" /></a><br />
       <b>다모임</b><br />
-      <sub>기획부터 서버까지 혼자 만든 동아리 운영 앱</sub>
+      <sub>혼자 기획하고 서버까지 만든 동아리 운영 앱</sub>
     </td>
     <td align="center" width="20%">
       <a href="https://gyeongseok.vercel.app/projects/poketdesktop"><img src="public/work/icons/poketdesktop.webp" width="72" alt="포스크탑" /></a><br />
@@ -61,7 +62,7 @@
     <td align="center" width="20%">
       <a href="https://gyeongseok.vercel.app/projects/switchboard"><img src="public/work/icons/switchboard.webp" width="72" alt="스위치보드" /></a><br />
       <b>스위치보드</b><br />
-      <sub>Android 원격 설정 편집 데스크톱 앱</sub>
+      <sub>Android 원격 설정을 폼으로 편집하는 데스크톱 앱</sub>
     </td>
   </tr>
 </table>
@@ -74,7 +75,7 @@
 <a href="https://gyeongseok.vercel.app/projects/landrop"><img src="public/work/icons/landrop.webp" width="44" alt="LanDrop" /></a>&nbsp;
 <a href="https://gyeongseok.vercel.app/projects/darestory"><img src="public/work/icons/darestory.webp" width="44" alt="달의 이야기" /></a>
 
-<sub>그 밖의 프로젝트는 <a href="https://gyeongseok.vercel.app/projects">사이트</a>에서 볼 수 있어요.</sub>
+<sub>나머지 프로젝트는 <a href="https://gyeongseok.vercel.app/projects">사이트</a>에 있습니다.</sub>
 
 </div>
 
